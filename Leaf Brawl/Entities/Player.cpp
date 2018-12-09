@@ -22,6 +22,43 @@
 #include "Player.h"
 
 void Player::update(bool left, bool right, float dt) {
-	InputState newInput = (InputState)((LEFT & left) | (RIGHT & right));
+	orxObject_GetPosition(entity, &pos);
+	InputState newInput = computeState(left, right);
+	switch (newInput) {
+		case LEFT:
+			pos.fX -= motionSpeed * dt;
+			break;
+		case RIGHT:
+			pos.fX += motionSpeed * dt;
+			break;
+		case BOTH:
+			switch (inputState) {
+				case LEFT:
+					break;
+				case RIGHT:
+					break;
+				default:
+					break;
+			}
+			break;
+		default:
+			break;
+	}
+	orxObject_SetPosition(entity, &pos);
 	inputState = newInput;
+}
+
+InputState Player::computeState(bool left, bool right) {
+	InputState state = NONE;
+	if (left) {
+		state = (InputState)(state | LEFT);
+	}
+	if (right) {
+		state = (InputState)(state | RIGHT);
+	}
+	return state;
+}
+
+InputState Player::getInputState() {
+	return inputState;
 }

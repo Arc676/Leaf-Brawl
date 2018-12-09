@@ -10,21 +10,23 @@
 		712B643521BD984C003A9718 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643221BD984B003A9718 /* Main.cpp */; };
 		712B643621BD984C003A9718 /* StandAlone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643321BD984B003A9718 /* StandAlone.cpp */; };
 		712B649E21BD988D003A9718 /* liborx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; };
-		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; };
+		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64A821BDAB14003A9718 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A621BDAB14003A9718 /* Entity.cpp */; };
 		712B64AB21BDAB49003A9718 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A921BDAB49003A9718 /* Player.cpp */; };
+		712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		712B642521BD95FB003A9718 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = usr/share/man/man1;
+			buildActionMask = 12;
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
 				712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */,
+				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -113,16 +115,15 @@
 		712B649521BD988D003A9718 /* orxTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxTree.h; sourceTree = "<group>"; };
 		712B649721BD988D003A9718 /* Leaf Brawl.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Leaf Brawl.ini"; sourceTree = "<group>"; };
 		712B649921BD988D003A9718 /* liborx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liborx.dylib; sourceTree = "<group>"; };
-		712B649A21BD988D003A9718 /* liborx.so */ = {isa = PBXFileReference; lastKnownFileType = file; path = liborx.so; sourceTree = "<group>"; };
 		712B649B21BD988D003A9718 /* liborxd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liborxd.dylib; sourceTree = "<group>"; };
-		712B649C21BD988D003A9718 /* liborxd.so */ = {isa = PBXFileReference; lastKnownFileType = file; path = liborxd.so; sourceTree = "<group>"; };
-		712B649D21BD988D003A9718 /* orx.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = orx.lib; sourceTree = "<group>"; };
 		712B64A221BD989D003A9718 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		712B64A321BD989E003A9718 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		712B64A621BDAB14003A9718 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		712B64A721BDAB14003A9718 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		712B64A921BDAB49003A9718 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		712B64AA21BDAB49003A9718 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		712B64AE21BDB1DD003A9718 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		712B64AF21BDB1DD003A9718 /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +158,7 @@
 		712B642921BD95FB003A9718 /* Leaf Brawl */ = {
 			isa = PBXGroup;
 			children = (
+				712B64AD21BDB1DD003A9718 /* Metadata */,
 				712B643121BD984B003A9718 /* App */,
 				712B64A521BDAAEE003A9718 /* Entities */,
 				712B649621BD988D003A9718 /* bin */,
@@ -401,10 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				712B649921BD988D003A9718 /* liborx.dylib */,
-				712B649A21BD988D003A9718 /* liborx.so */,
 				712B649B21BD988D003A9718 /* liborxd.dylib */,
-				712B649C21BD988D003A9718 /* liborxd.so */,
-				712B649D21BD988D003A9718 /* orx.lib */,
 			);
 			path = lib;
 			sourceTree = SOURCE_ROOT;
@@ -427,6 +426,15 @@
 				712B64AA21BDAB49003A9718 /* Player.h */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		712B64AD21BDB1DD003A9718 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				712B64AE21BDB1DD003A9718 /* Info.plist */,
+				712B64AF21BDB1DD003A9718 /* version.plist */,
+			);
+			path = Metadata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

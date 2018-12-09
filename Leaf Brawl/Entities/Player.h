@@ -33,8 +33,11 @@ enum InputState : int {
 
 class Player : Entity {
 	InputState inputState;
+
+	InputState computeState(bool left, bool right);
 public:
 	void update(bool left, bool right, float dt);
+	InputState getInputState();
 };
 
 #endif
