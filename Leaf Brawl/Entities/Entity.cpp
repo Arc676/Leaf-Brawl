@@ -1,5 +1,5 @@
 //
-//  StandAlone.h
+//  Entity.cpp
 //  Leaf Brawl
 //
 //  Created by Alessandro Vinciguerra on 2017-12-09.
@@ -19,33 +19,16 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef StandAlone_h
-#define StandAlone_h
+#include "Entity.h"
 
-#include "orx.h"
+int Entity::getHP() {
+	return hp;
+}
 
-#include "Player.h"
+orxVECTOR Entity::getPosition() {
+	return pos;
+}
 
-class StandAlone {
-public:
-	static StandAlone* Instance();
-
-	static orxSTATUS orxFASTCALL Init();
-	static orxSTATUS orxFASTCALL Run();
-
-	static void orxFASTCALL Exit();
-
-	static void orxFASTCALL Update(const orxCLOCK_INFO*, void*);
-
-	static orxSTATUS orxFASTCALL EventHandler(const orxEVENT*);
-protected:
-	StandAlone();
-	StandAlone(const StandAlone&);
-	StandAlone& operator= (const StandAlone&);
-private:
-	static StandAlone* m_Instance;
-
-	static Player* player;
-};
-
-#endif
+orxOBJECT* Entity::getEntity() {
+	return entity;
+}

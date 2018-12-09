@@ -1,5 +1,5 @@
 //
-//  StandAlone.h
+//  Player.hpp
 //  Leaf Brawl
 //
 //  Created by Alessandro Vinciguerra on 2017-12-09.
@@ -19,33 +19,22 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef StandAlone_h
-#define StandAlone_h
+#ifndef Player_h
+#define Player_h
 
-#include "orx.h"
+#include "Entity.h"
 
-#include "Player.h"
+enum InputState : int {
+	NONE  = 0b00,
+	LEFT  = 0b01,
+	RIGHT = 0b10,
+	BOTH  = 0b11
+};
 
-class StandAlone {
+class Player : Entity {
+	InputState inputState;
 public:
-	static StandAlone* Instance();
-
-	static orxSTATUS orxFASTCALL Init();
-	static orxSTATUS orxFASTCALL Run();
-
-	static void orxFASTCALL Exit();
-
-	static void orxFASTCALL Update(const orxCLOCK_INFO*, void*);
-
-	static orxSTATUS orxFASTCALL EventHandler(const orxEVENT*);
-protected:
-	StandAlone();
-	StandAlone(const StandAlone&);
-	StandAlone& operator= (const StandAlone&);
-private:
-	static StandAlone* m_Instance;
-
-	static Player* player;
+	void update(bool left, bool right, float dt);
 };
 
 #endif

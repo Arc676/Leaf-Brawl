@@ -22,6 +22,7 @@
 #include "StandAlone.h"
 
 StandAlone* StandAlone::m_Instance = orxNULL;
+Player* StandAlone::player = orxNULL;
 
 StandAlone* StandAlone::Instance() {
 	if (m_Instance != orxNULL) {
@@ -39,6 +40,8 @@ orxSTATUS orxFASTCALL StandAlone::Init() {
 
 	orxEvent_AddHandler(orxEVENT_TYPE_PHYSICS, StandAlone::EventHandler);
 
+	player = new Player();
+
 	return orxSTATUS_SUCCESS;
 }
 
@@ -51,6 +54,10 @@ void orxFASTCALL StandAlone::Exit() {
 }
 
 void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* context) {
+	player->update(
+				   orxInput_IsActive("InputLeft"),
+				   orxInput_IsActive("InputRight"),
+				   clockInfo->fDT);
 }
 
 orxSTATUS orxFASTCALL StandAlone::EventHandler(const orxEVENT* currentEvent) {
