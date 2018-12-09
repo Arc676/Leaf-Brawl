@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		712B643521BD984C003A9718 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643221BD984B003A9718 /* Main.cpp */; };
+		712B643621BD984C003A9718 /* StandAlone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643321BD984B003A9718 /* StandAlone.cpp */; };
+		712B649E21BD988D003A9718 /* liborx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; };
+		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		712B642521BD95FB003A9718 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
+			files = (
+				712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		712B642721BD95FB003A9718 /* Leaf Brawl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Leaf Brawl"; sourceTree = BUILT_PRODUCTS_DIR; };
+		712B643221BD984B003A9718 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		712B643321BD984B003A9718 /* StandAlone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandAlone.cpp; sourceTree = "<group>"; };
+		712B643421BD984B003A9718 /* StandAlone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandAlone.h; sourceTree = "<group>"; };
+		712B643921BD988D003A9718 /* orxAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxAnim.h; sourceTree = "<group>"; };
+		712B643A21BD988D003A9718 /* orxAnimPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxAnimPointer.h; sourceTree = "<group>"; };
+		712B643B21BD988D003A9718 /* orxAnimSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxAnimSet.h; sourceTree = "<group>"; };
+		712B643D21BD988D003A9718 /* orxBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxBuild.h; sourceTree = "<group>"; };
+		712B643E21BD988D003A9718 /* orxDecl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxDecl.h; sourceTree = "<group>"; };
+		712B643F21BD988D003A9718 /* orxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxModule.h; sourceTree = "<group>"; };
+		712B644021BD988D003A9718 /* orxType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxType.h; sourceTree = "<group>"; };
+		712B644121BD988D003A9718 /* orxVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxVersion.h; sourceTree = "<group>"; };
+		712B644321BD988D003A9718 /* orxClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxClock.h; sourceTree = "<group>"; };
+		712B644421BD988D003A9718 /* orxCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxCommand.h; sourceTree = "<group>"; };
+		712B644521BD988D003A9718 /* orxConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxConfig.h; sourceTree = "<group>"; };
+		712B644621BD988D003A9718 /* orxConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxConsole.h; sourceTree = "<group>"; };
+		712B644721BD988D003A9718 /* orxEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxEvent.h; sourceTree = "<group>"; };
+		712B644821BD988D003A9718 /* orxLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxLocale.h; sourceTree = "<group>"; };
+		712B644921BD988D003A9718 /* orxResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxResource.h; sourceTree = "<group>"; };
+		712B644A21BD988D003A9718 /* orxSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxSystem.h; sourceTree = "<group>"; };
+		712B644B21BD988D003A9718 /* orxThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxThread.h; sourceTree = "<group>"; };
+		712B644D21BD988D003A9718 /* orxDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxDebug.h; sourceTree = "<group>"; };
+		712B644E21BD988D003A9718 /* orxFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFPS.h; sourceTree = "<group>"; };
+		712B644F21BD988D003A9718 /* orxProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxProfiler.h; sourceTree = "<group>"; };
+		712B645121BD988D003A9718 /* orxDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxDisplay.h; sourceTree = "<group>"; };
+		712B645221BD988D003A9718 /* orxFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFont.h; sourceTree = "<group>"; };
+		712B645321BD988D003A9718 /* orxGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxGraphic.h; sourceTree = "<group>"; };
+		712B645421BD988D003A9718 /* orxScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxScreenshot.h; sourceTree = "<group>"; };
+		712B645521BD988D003A9718 /* orxText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxText.h; sourceTree = "<group>"; };
+		712B645621BD988D003A9718 /* orxTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxTexture.h; sourceTree = "<group>"; };
+		712B645821BD988D003A9718 /* orxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFile.h; sourceTree = "<group>"; };
+		712B645921BD988D003A9718 /* orxInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxInput.h; sourceTree = "<group>"; };
+		712B645A21BD988D003A9718 /* orxJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxJoystick.h; sourceTree = "<group>"; };
+		712B645B21BD988D003A9718 /* orxKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxKeyboard.h; sourceTree = "<group>"; };
+		712B645C21BD988D003A9718 /* orxMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxMouse.h; sourceTree = "<group>"; };
+		712B645E21BD988D003A9718 /* orxAndroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxAndroid.h; sourceTree = "<group>"; };
+		712B645F21BD988D003A9718 /* orxParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxParam.h; sourceTree = "<group>"; };
+		712B646121BD988D003A9718 /* orxAABox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxAABox.h; sourceTree = "<group>"; };
+		712B646221BD988D003A9718 /* orxMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxMath.h; sourceTree = "<group>"; };
+		712B646321BD988D003A9718 /* orxOBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxOBox.h; sourceTree = "<group>"; };
+		712B646421BD988D003A9718 /* orxVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxVector.h; sourceTree = "<group>"; };
+		712B646621BD988D003A9718 /* orxBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxBank.h; sourceTree = "<group>"; };
+		712B646721BD988D003A9718 /* orxMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxMemory.h; sourceTree = "<group>"; };
+		712B646921BD988D003A9718 /* orxFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFrame.h; sourceTree = "<group>"; };
+		712B646A21BD988D003A9718 /* orxFX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFX.h; sourceTree = "<group>"; };
+		712B646B21BD988D003A9718 /* orxFXPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxFXPointer.h; sourceTree = "<group>"; };
+		712B646C21BD988D003A9718 /* orxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxObject.h; sourceTree = "<group>"; };
+		712B646D21BD988D003A9718 /* orxSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxSpawner.h; sourceTree = "<group>"; };
+		712B646E21BD988D003A9718 /* orxStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxStructure.h; sourceTree = "<group>"; };
+		712B646F21BD988D003A9718 /* orxTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxTimeLine.h; sourceTree = "<group>"; };
+		712B647021BD988D003A9718 /* orx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orx.h; sourceTree = "<group>"; };
+		712B647121BD988D003A9718 /* orxInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxInclude.h; sourceTree = "<group>"; };
+		712B647221BD988D003A9718 /* orxKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxKernel.h; sourceTree = "<group>"; };
+		712B647321BD988D003A9718 /* orxPluginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPluginAPI.h; sourceTree = "<group>"; };
+		712B647421BD988D003A9718 /* orxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxUtils.h; sourceTree = "<group>"; };
+		712B647621BD988D003A9718 /* orxBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxBody.h; sourceTree = "<group>"; };
+		712B647721BD988D003A9718 /* orxPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPhysics.h; sourceTree = "<group>"; };
+		712B647A21BD988D003A9718 /* orxPlugin_CoreDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_CoreDefine.h; sourceTree = "<group>"; };
+		712B647B21BD988D003A9718 /* orxPlugin_CoreID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_CoreID.h; sourceTree = "<group>"; };
+		712B647C21BD988D003A9718 /* orxPlugin_Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Display.h; sourceTree = "<group>"; };
+		712B647D21BD988D003A9718 /* orxPlugin_Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Joystick.h; sourceTree = "<group>"; };
+		712B647E21BD988D003A9718 /* orxPlugin_Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Keyboard.h; sourceTree = "<group>"; };
+		712B647F21BD988D003A9718 /* orxPlugin_Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Mouse.h; sourceTree = "<group>"; };
+		712B648021BD988D003A9718 /* orxPlugin_Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Physics.h; sourceTree = "<group>"; };
+		712B648121BD988D003A9718 /* orxPlugin_Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_Render.h; sourceTree = "<group>"; };
+		712B648221BD988D003A9718 /* orxPlugin_SoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin_SoundSystem.h; sourceTree = "<group>"; };
+		712B648321BD988D003A9718 /* orxPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPlugin.h; sourceTree = "<group>"; };
+		712B648421BD988D003A9718 /* orxPluginCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPluginCore.h; sourceTree = "<group>"; };
+		712B648521BD988D003A9718 /* orxPluginType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPluginType.h; sourceTree = "<group>"; };
+		712B648621BD988D003A9718 /* orxPluginUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxPluginUser.h; sourceTree = "<group>"; };
+		712B648821BD988D003A9718 /* orxCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxCamera.h; sourceTree = "<group>"; };
+		712B648921BD988D003A9718 /* orxRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxRender.h; sourceTree = "<group>"; };
+		712B648A21BD988D003A9718 /* orxShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxShader.h; sourceTree = "<group>"; };
+		712B648B21BD988D003A9718 /* orxShaderPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxShaderPointer.h; sourceTree = "<group>"; };
+		712B648C21BD988D003A9718 /* orxViewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxViewport.h; sourceTree = "<group>"; };
+		712B648E21BD988D003A9718 /* orxSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxSound.h; sourceTree = "<group>"; };
+		712B648F21BD988D003A9718 /* orxSoundPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxSoundPointer.h; sourceTree = "<group>"; };
+		712B649021BD988D003A9718 /* orxSoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxSoundSystem.h; sourceTree = "<group>"; };
+		712B649221BD988D003A9718 /* orxHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxHashTable.h; sourceTree = "<group>"; };
+		712B649321BD988D003A9718 /* orxLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxLinkList.h; sourceTree = "<group>"; };
+		712B649421BD988D003A9718 /* orxString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxString.h; sourceTree = "<group>"; };
+		712B649521BD988D003A9718 /* orxTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orxTree.h; sourceTree = "<group>"; };
+		712B649721BD988D003A9718 /* Leaf Brawl.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Leaf Brawl.ini"; sourceTree = "<group>"; };
+		712B649921BD988D003A9718 /* liborx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liborx.dylib; sourceTree = "<group>"; };
+		712B649A21BD988D003A9718 /* liborx.so */ = {isa = PBXFileReference; lastKnownFileType = file; path = liborx.so; sourceTree = "<group>"; };
+		712B649B21BD988D003A9718 /* liborxd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liborxd.dylib; sourceTree = "<group>"; };
+		712B649C21BD988D003A9718 /* liborxd.so */ = {isa = PBXFileReference; lastKnownFileType = file; path = liborxd.so; sourceTree = "<group>"; };
+		712B649D21BD988D003A9718 /* orx.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = orx.lib; sourceTree = "<group>"; };
+		712B64A221BD989D003A9718 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		712B64A321BD989E003A9718 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		712B642421BD95FB003A9718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712B649E21BD988D003A9718 /* liborx.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		712B641E21BD95FB003A9718 = {
+			isa = PBXGroup;
+			children = (
+				712B64A121BD9895003A9718 /* Meta */,
+				712B642921BD95FB003A9718 /* Leaf Brawl */,
+				712B642821BD95FB003A9718 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		712B642821BD95FB003A9718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				712B642721BD95FB003A9718 /* Leaf Brawl */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		712B642921BD95FB003A9718 /* Leaf Brawl */ = {
+			isa = PBXGroup;
+			children = (
+				712B649621BD988D003A9718 /* bin */,
+				712B643721BD988D003A9718 /* inc */,
+				712B649821BD988D003A9718 /* lib */,
+				712B643121BD984B003A9718 /* App */,
+			);
+			path = "Leaf Brawl";
+			sourceTree = "<group>";
+		};
+		712B643121BD984B003A9718 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				712B643221BD984B003A9718 /* Main.cpp */,
+				712B643321BD984B003A9718 /* StandAlone.cpp */,
+				712B643421BD984B003A9718 /* StandAlone.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		712B643721BD988D003A9718 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				712B643821BD988D003A9718 /* anim */,
+				712B643C21BD988D003A9718 /* base */,
+				712B644221BD988D003A9718 /* core */,
+				712B644C21BD988D003A9718 /* debug */,
+				712B645021BD988D003A9718 /* display */,
+				712B645721BD988D003A9718 /* io */,
+				712B645D21BD988D003A9718 /* main */,
+				712B646021BD988D003A9718 /* math */,
+				712B646521BD988D003A9718 /* memory */,
+				712B646821BD988D003A9718 /* object */,
+				712B647021BD988D003A9718 /* orx.h */,
+				712B647121BD988D003A9718 /* orxInclude.h */,
+				712B647221BD988D003A9718 /* orxKernel.h */,
+				712B647321BD988D003A9718 /* orxPluginAPI.h */,
+				712B647421BD988D003A9718 /* orxUtils.h */,
+				712B647521BD988D003A9718 /* physics */,
+				712B647821BD988D003A9718 /* plugin */,
+				712B648721BD988D003A9718 /* render */,
+				712B648D21BD988D003A9718 /* sound */,
+				712B649121BD988D003A9718 /* utils */,
+			);
+			path = inc;
+			sourceTree = SOURCE_ROOT;
+		};
+		712B643821BD988D003A9718 /* anim */ = {
+			isa = PBXGroup;
+			children = (
+				712B643921BD988D003A9718 /* orxAnim.h */,
+				712B643A21BD988D003A9718 /* orxAnimPointer.h */,
+				712B643B21BD988D003A9718 /* orxAnimSet.h */,
+			);
+			path = anim;
+			sourceTree = "<group>";
+		};
+		712B643C21BD988D003A9718 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				712B643D21BD988D003A9718 /* orxBuild.h */,
+				712B643E21BD988D003A9718 /* orxDecl.h */,
+				712B643F21BD988D003A9718 /* orxModule.h */,
+				712B644021BD988D003A9718 /* orxType.h */,
+				712B644121BD988D003A9718 /* orxVersion.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		712B644221BD988D003A9718 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				712B644321BD988D003A9718 /* orxClock.h */,
+				712B644421BD988D003A9718 /* orxCommand.h */,
+				712B644521BD988D003A9718 /* orxConfig.h */,
+				712B644621BD988D003A9718 /* orxConsole.h */,
+				712B644721BD988D003A9718 /* orxEvent.h */,
+				712B644821BD988D003A9718 /* orxLocale.h */,
+				712B644921BD988D003A9718 /* orxResource.h */,
+				712B644A21BD988D003A9718 /* orxSystem.h */,
+				712B644B21BD988D003A9718 /* orxThread.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		712B644C21BD988D003A9718 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				712B644D21BD988D003A9718 /* orxDebug.h */,
+				712B644E21BD988D003A9718 /* orxFPS.h */,
+				712B644F21BD988D003A9718 /* orxProfiler.h */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		712B645021BD988D003A9718 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				712B645121BD988D003A9718 /* orxDisplay.h */,
+				712B645221BD988D003A9718 /* orxFont.h */,
+				712B645321BD988D003A9718 /* orxGraphic.h */,
+				712B645421BD988D003A9718 /* orxScreenshot.h */,
+				712B645521BD988D003A9718 /* orxText.h */,
+				712B645621BD988D003A9718 /* orxTexture.h */,
+			);
+			path = display;
+			sourceTree = "<group>";
+		};
+		712B645721BD988D003A9718 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				712B645821BD988D003A9718 /* orxFile.h */,
+				712B645921BD988D003A9718 /* orxInput.h */,
+				712B645A21BD988D003A9718 /* orxJoystick.h */,
+				712B645B21BD988D003A9718 /* orxKeyboard.h */,
+				712B645C21BD988D003A9718 /* orxMouse.h */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		712B645D21BD988D003A9718 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				712B645E21BD988D003A9718 /* orxAndroid.h */,
+				712B645F21BD988D003A9718 /* orxParam.h */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		712B646021BD988D003A9718 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				712B646121BD988D003A9718 /* orxAABox.h */,
+				712B646221BD988D003A9718 /* orxMath.h */,
+				712B646321BD988D003A9718 /* orxOBox.h */,
+				712B646421BD988D003A9718 /* orxVector.h */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		712B646521BD988D003A9718 /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				712B646621BD988D003A9718 /* orxBank.h */,
+				712B646721BD988D003A9718 /* orxMemory.h */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
+		712B646821BD988D003A9718 /* object */ = {
+			isa = PBXGroup;
+			children = (
+				712B646921BD988D003A9718 /* orxFrame.h */,
+				712B646A21BD988D003A9718 /* orxFX.h */,
+				712B646B21BD988D003A9718 /* orxFXPointer.h */,
+				712B646C21BD988D003A9718 /* orxObject.h */,
+				712B646D21BD988D003A9718 /* orxSpawner.h */,
+				712B646E21BD988D003A9718 /* orxStructure.h */,
+				712B646F21BD988D003A9718 /* orxTimeLine.h */,
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		712B647521BD988D003A9718 /* physics */ = {
+			isa = PBXGroup;
+			children = (
+				712B647621BD988D003A9718 /* orxBody.h */,
+				712B647721BD988D003A9718 /* orxPhysics.h */,
+			);
+			path = physics;
+			sourceTree = "<group>";
+		};
+		712B647821BD988D003A9718 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				712B647921BD988D003A9718 /* define */,
+				712B648321BD988D003A9718 /* orxPlugin.h */,
+				712B648421BD988D003A9718 /* orxPluginCore.h */,
+				712B648521BD988D003A9718 /* orxPluginType.h */,
+				712B648621BD988D003A9718 /* orxPluginUser.h */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		712B647921BD988D003A9718 /* define */ = {
+			isa = PBXGroup;
+			children = (
+				712B647A21BD988D003A9718 /* orxPlugin_CoreDefine.h */,
+				712B647B21BD988D003A9718 /* orxPlugin_CoreID.h */,
+				712B647C21BD988D003A9718 /* orxPlugin_Display.h */,
+				712B647D21BD988D003A9718 /* orxPlugin_Joystick.h */,
+				712B647E21BD988D003A9718 /* orxPlugin_Keyboard.h */,
+				712B647F21BD988D003A9718 /* orxPlugin_Mouse.h */,
+				712B648021BD988D003A9718 /* orxPlugin_Physics.h */,
+				712B648121BD988D003A9718 /* orxPlugin_Render.h */,
+				712B648221BD988D003A9718 /* orxPlugin_SoundSystem.h */,
+			);
+			path = define;
+			sourceTree = "<group>";
+		};
+		712B648721BD988D003A9718 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				712B648821BD988D003A9718 /* orxCamera.h */,
+				712B648921BD988D003A9718 /* orxRender.h */,
+				712B648A21BD988D003A9718 /* orxShader.h */,
+				712B648B21BD988D003A9718 /* orxShaderPointer.h */,
+				712B648C21BD988D003A9718 /* orxViewport.h */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		712B648D21BD988D003A9718 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				712B648E21BD988D003A9718 /* orxSound.h */,
+				712B648F21BD988D003A9718 /* orxSoundPointer.h */,
+				712B649021BD988D003A9718 /* orxSoundSystem.h */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		712B649121BD988D003A9718 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				712B649221BD988D003A9718 /* orxHashTable.h */,
+				712B649321BD988D003A9718 /* orxLinkList.h */,
+				712B649421BD988D003A9718 /* orxString.h */,
+				712B649521BD988D003A9718 /* orxTree.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		712B649621BD988D003A9718 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				712B649721BD988D003A9718 /* Leaf Brawl.ini */,
+			);
+			path = bin;
+			sourceTree = SOURCE_ROOT;
+		};
+		712B649821BD988D003A9718 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				712B649921BD988D003A9718 /* liborx.dylib */,
+				712B649A21BD988D003A9718 /* liborx.so */,
+				712B649B21BD988D003A9718 /* liborxd.dylib */,
+				712B649C21BD988D003A9718 /* liborxd.so */,
+				712B649D21BD988D003A9718 /* orx.lib */,
+			);
+			path = lib;
+			sourceTree = SOURCE_ROOT;
+		};
+		712B64A121BD9895003A9718 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				712B64A221BD989D003A9718 /* LICENSE */,
+				712B64A321BD989E003A9718 /* README.md */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		712B642621BD95FB003A9718 /* Leaf Brawl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712B642E21BD95FB003A9718 /* Build configuration list for PBXNativeTarget "Leaf Brawl" */;
+			buildPhases = (
+				712B642321BD95FB003A9718 /* Sources */,
+				712B642421BD95FB003A9718 /* Frameworks */,
+				712B642521BD95FB003A9718 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Leaf Brawl";
+			productName = "Leaf Brawl";
+			productReference = 712B642721BD95FB003A9718 /* Leaf Brawl */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		712B641F21BD95FB003A9718 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Arc676;
+				TargetAttributes = {
+					712B642621BD95FB003A9718 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 712B642221BD95FB003A9718 /* Build configuration list for PBXProject "Leaf Brawl" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 712B641E21BD95FB003A9718;
+			productRefGroup = 712B642821BD95FB003A9718 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				712B642621BD95FB003A9718 /* Leaf Brawl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		712B642321BD95FB003A9718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712B643621BD984C003A9718 /* StandAlone.cpp in Sources */,
+				712B643521BD984C003A9718 /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		712B642C21BD95FB003A9718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		712B642D21BD95FB003A9718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		712B642F21BD95FB003A9718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T42F23M422;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = inc;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "inc/**";
+			};
+			name = Debug;
+		};
+		712B643021BD95FB003A9718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T42F23M422;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = inc;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "inc/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		712B642221BD95FB003A9718 /* Build configuration list for PBXProject "Leaf Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712B642C21BD95FB003A9718 /* Debug */,
+				712B642D21BD95FB003A9718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		712B642E21BD95FB003A9718 /* Build configuration list for PBXNativeTarget "Leaf Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712B642F21BD95FB003A9718 /* Debug */,
+				712B643021BD95FB003A9718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 712B641F21BD95FB003A9718 /* Project object */;
+}
