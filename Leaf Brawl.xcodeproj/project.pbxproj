@@ -14,6 +14,9 @@
 		712B64A821BDAB14003A9718 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A621BDAB14003A9718 /* Entity.cpp */; };
 		712B64AB21BDAB49003A9718 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A921BDAB49003A9718 /* Player.cpp */; };
 		712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B021BDB66F003A9718 /* Player.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B121BDB710003A9718 /* Entity.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B221BDB72C003A9718 /* Actionable.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +27,9 @@
 			dstSubfolderSpec = 16;
 			files = (
 				712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */,
+				712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */,
+				712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */,
+				712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +130,9 @@
 		712B64AA21BDAB49003A9718 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		712B64AE21BDB1DD003A9718 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712B64AF21BDB1DD003A9718 /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
+		712B64B021BDB66F003A9718 /* Player.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Player.ini; sourceTree = "<group>"; };
+		712B64B121BDB710003A9718 /* Entity.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entity.ini; sourceTree = "<group>"; };
+		712B64B221BDB72C003A9718 /* Actionable.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Actionable.ini; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +404,9 @@
 			isa = PBXGroup;
 			children = (
 				712B649721BD988D003A9718 /* Leaf Brawl.ini */,
+				712B64B021BDB66F003A9718 /* Player.ini */,
+				712B64B121BDB710003A9718 /* Entity.ini */,
+				712B64B221BDB72C003A9718 /* Actionable.ini */,
 			);
 			path = bin;
 			sourceTree = SOURCE_ROOT;
@@ -444,9 +456,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 712B642E21BD95FB003A9718 /* Build configuration list for PBXNativeTarget "Leaf Brawl" */;
 			buildPhases = (
+				712B642521BD95FB003A9718 /* CopyFiles */,
 				712B642321BD95FB003A9718 /* Sources */,
 				712B642421BD95FB003A9718 /* Frameworks */,
-				712B642521BD95FB003A9718 /* CopyFiles */,
 			);
 			buildRules = (
 			);

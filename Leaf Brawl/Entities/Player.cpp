@@ -21,6 +21,13 @@
 
 #include "Player.h"
 
+Player::Player() {
+	orxInput_Load(orxSTRING_EMPTY);
+	entity = orxObject_CreateFromConfig("Player");
+	pos = Entity::createVector(0, 0, 0);
+	orxObject_SetPosition(entity, &pos);
+}
+
 void Player::update(bool left, bool right, float dt) {
 	orxObject_GetPosition(entity, &pos);
 	InputState newInput = computeState(left, right);

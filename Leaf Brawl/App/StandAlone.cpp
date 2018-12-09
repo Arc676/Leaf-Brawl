@@ -22,6 +22,7 @@
 #include "StandAlone.h"
 
 StandAlone* StandAlone::m_Instance = orxNULL;
+orxCAMERA* StandAlone::camera = orxNULL;
 Player* StandAlone::player = orxNULL;
 
 StandAlone* StandAlone::Instance() {
@@ -35,6 +36,9 @@ StandAlone* StandAlone::Instance() {
 StandAlone::StandAlone() {}
 
 orxSTATUS orxFASTCALL StandAlone::Init() {
+	orxVIEWPORT* viewport = orxViewport_CreateFromConfig("MainViewport");
+	camera = orxViewport_GetCamera(viewport);
+	
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
 
@@ -58,6 +62,11 @@ void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* contex
 				   orxInput_IsActive("InputLeft"),
 				   orxInput_IsActive("InputRight"),
 				   clockInfo->fDT);
+	orxVECTOR camPos;
+	orxCamera_GetPosition(camera, &camPos);
+	camPos.fX = player->getPosition().fX;
+	camPos.fY = player->getPosition().fY;
+	orxCamera_SetPosition(camera, &camPos);
 }
 
 orxSTATUS orxFASTCALL StandAlone::EventHandler(const orxEVENT* currentEvent) {

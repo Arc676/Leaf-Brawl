@@ -21,6 +21,14 @@
 
 #include "Entity.h"
 
+orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
+	orxVECTOR vector;
+	vector.fX = x;
+	vector.fY = y;
+	vector.fZ = z;
+	return vector;
+}
+
 int Entity::getHP() {
 	return hp;
 }

@@ -45,6 +45,8 @@ protected:
 private:
 	static StandAlone* m_Instance;
 
+	static orxCAMERA* camera;
+
 	static Player* player;
 };
 

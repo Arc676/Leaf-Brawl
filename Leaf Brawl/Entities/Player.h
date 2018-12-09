@@ -31,11 +31,12 @@ enum InputState : int {
 	BOTH  = 0b11
 };
 
-class Player : Entity {
+class Player : public Entity {
 	InputState inputState;
 
 	InputState computeState(bool left, bool right);
 public:
+	Player();
 	void update(bool left, bool right, float dt);
 	InputState getInputState();
 };

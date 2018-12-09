@@ -32,6 +32,8 @@ protected:
 
 	orxVECTOR pos;
 	orxOBJECT* entity;
+	
+	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
 public:
 	int getHP();
 	orxVECTOR getPosition();
