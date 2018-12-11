@@ -38,6 +38,8 @@ StandAlone::StandAlone() {}
 orxSTATUS orxFASTCALL StandAlone::Init() {
 	orxVIEWPORT* viewport = orxViewport_CreateFromConfig("MainViewport");
 	camera = orxViewport_GetCamera(viewport);
+
+	orxObject_CreateFromConfig("Town");
 	
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);

@@ -1,5 +1,5 @@
 //
-//  Player.hpp
+//  Player.h
 //  Leaf Brawl
 //
 //  Created by Alessandro Vinciguerra on 2017-12-09.
@@ -32,16 +32,28 @@ enum InputState : int {
 	BOTH  = 0b11
 };
 
+enum PlayerStyle {
+	MAPLE,
+	HORNBEAM,
+	CHESTNUT,
+	WILLOW
+};
+
 class Player : public Entity {
+	PlayerStyle style = HORNBEAM;
+
 	InputState inputState;
 
-	Actionable* currentActionable;
+	Actionable* currentActionable = nullptr;
 
 	InputState computeState(bool left, bool right);
 public:
 	Player();
+
 	void update(bool left, bool right, float dt);
 	InputState getInputState();
+
+	PlayerStyle getStyle();
 
 	void approachActionable(Actionable* act);
 };

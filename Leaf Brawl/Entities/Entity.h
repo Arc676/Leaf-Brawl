@@ -1,5 +1,5 @@
 //
-//  Entity.hpp
+//  Entity.h
 //  Leaf Brawl
 //
 //  Created by Alessandro Vinciguerra on 2017-12-09.
@@ -29,11 +29,15 @@ protected:
 	const int motionSpeed = 60;
 
 	int hp;
+	orxVECTOR jumpForce;
 
 	orxVECTOR pos;
 	orxOBJECT* entity;
+	orxBODY* body;
 	
 	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
+
+	Entity();
 public:
 	int getHP();
 	orxVECTOR getPosition();

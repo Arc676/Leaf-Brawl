@@ -21,10 +21,11 @@
 
 #include "Player.h"
 
-Player::Player() {
+Player::Player() : Entity() {
 	orxInput_Load(orxSTRING_EMPTY);
 	entity = orxObject_CreateFromConfig("Player");
-	pos = Entity::createVector(0, 0, 0);
+	body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
+	pos = Entity::createVector(0, 10, 0);
 	orxObject_SetPosition(entity, &pos);
 }
 
@@ -47,6 +48,8 @@ void Player::update(bool left, bool right, float dt) {
 				default:
 					if (currentActionable) {
 						currentActionable->action(this);
+					} else {
+						orxBody_ApplyForce(body, &jumpForce, orxNULL);
 					}
 					break;
 			}
@@ -75,4 +78,8 @@ InputState Player::getInputState() {
 
 void Player::approachActionable(Actionable *act) {
 	currentActionable = act;
+}
+
+PlayerStyle Player::getStyle() {
+	return style;
 }

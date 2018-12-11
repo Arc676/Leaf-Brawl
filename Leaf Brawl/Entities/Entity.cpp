@@ -21,6 +21,11 @@
 
 #include "Entity.h"
 
+Entity::Entity() {
+	hp = 100;
+	jumpForce = createVector(0, -10, 0);
+}
+
 orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
 	orxVECTOR vector;
 	vector.fX = x;
