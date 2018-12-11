@@ -22,7 +22,8 @@
 #include "StandAlone.h"
 
 StandAlone* StandAlone::m_Instance = orxNULL;
-orxCAMERA* StandAlone::camera = orxNULL;
+Scene* StandAlone::currentScene = orxNULL;
+Town* StandAlone::townScene = orxNULL;
 Player* StandAlone::player = orxNULL;
 
 StandAlone* StandAlone::Instance() {
@@ -36,17 +37,18 @@ StandAlone* StandAlone::Instance() {
 StandAlone::StandAlone() {}
 
 orxSTATUS orxFASTCALL StandAlone::Init() {
-	orxVIEWPORT* viewport = orxViewport_CreateFromConfig("MainViewport");
-	camera = orxViewport_GetCamera(viewport);
+	player = new Player();
 
-	orxObject_CreateFromConfig("Town");
+	orxVIEWPORT* viewport = orxViewport_CreateFromConfig("MainViewport");
+	orxCAMERA *townCam = orxViewport_GetCamera(viewport);
+
+	townScene = new Town(player, townCam);
+	currentScene = townScene;
 	
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
 
 	orxEvent_AddHandler(orxEVENT_TYPE_PHYSICS, StandAlone::EventHandler);
-
-	player = new Player();
 
 	return orxSTATUS_SUCCESS;
 }
@@ -60,54 +62,9 @@ void orxFASTCALL StandAlone::Exit() {
 }
 
 void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* context) {
-	player->update(
-				   orxInput_IsActive("InputLeft"),
-				   orxInput_IsActive("InputRight"),
-				   clockInfo->fDT);
-	orxVECTOR camPos;
-	orxCamera_GetPosition(camera, &camPos);
-	camPos.fX = player->getPosition().fX;
-	camPos.fY = player->getPosition().fY;
-	orxCamera_SetPosition(camera, &camPos);
+	currentScene->update(clockInfo, context);
 }
 
 orxSTATUS orxFASTCALL StandAlone::EventHandler(const orxEVENT* currentEvent) {
-	switch (currentEvent->eType) {
-		case orxEVENT_TYPE_PHYSICS:
-		{
-			orxOBJECT* objs[] = {
-				orxOBJECT(currentEvent->hSender),
-				orxOBJECT(currentEvent->hRecipient)
-			};
-			switch (currentEvent->eID) {
-				case orxPHYSICS_EVENT_CONTACT_ADD:
-				case orxPHYSICS_EVENT_CONTACT_REMOVE:
-					for (int i = 0; i < 2; i++) {
-						orxSTRING name1 = (orxSTRING)orxObject_GetName(objs[i]);
-						orxSTRING name2 = (orxSTRING)orxObject_GetName(objs[1 - i]);
-						if (!orxString_Compare(name1, "Player")) {
-							orxConfig_PushSection(name2);
-							orxBOOL isActionable = orxConfig_GetBool("IsActionable");
-							orxConfig_PopSection();
-							if (isActionable) {
-								Actionable* act = (Actionable*)orxObject_GetUserData(objs[1 - i]);
-								if (currentEvent->eID == orxPHYSICS_EVENT_CONTACT_ADD) {
-									player->approachActionable(act);
-								} else {
-									player->leaveActionable();
-									act->controlLoss();
-								}
-							}
-						}
-					}
-					break;
-				default:
-					break;
-			}
-			break;
-		}
-		default:
-			break;
-	}
-	return orxSTATUS_SUCCESS;
+	return currentScene->EventHandler(currentEvent);
 }

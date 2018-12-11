@@ -26,7 +26,7 @@
 
 class Entity {
 protected:
-	const int motionSpeed = 60;
+	const int motionSpeed = 100;
 
 	int hp;
 	orxVECTOR jumpForce;
@@ -39,7 +39,10 @@ protected:
 public:
 	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
 	int getHP();
+
 	orxVECTOR getPosition();
+	void setPosition(orxVECTOR newpos);
+
 	orxOBJECT* getEntity();
 };
 

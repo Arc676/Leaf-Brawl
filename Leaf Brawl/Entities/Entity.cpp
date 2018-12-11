@@ -42,6 +42,11 @@ orxVECTOR Entity::getPosition() {
 	return pos;
 }
 
+void Entity::setPosition(orxVECTOR newpos) {
+	orxVector_Copy(&pos, &newpos);
+	orxObject_SetPosition(entity, &pos);
+}
+
 orxOBJECT* Entity::getEntity() {
 	return entity;
 }

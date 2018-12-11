@@ -1,8 +1,8 @@
 //
-//  StandAlone.h
+//  Scene.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-11.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,36 +19,27 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef StandAlone_h
-#define StandAlone_h
+#ifndef Scene_h
+#define Scene_h
 
 #include "orx.h"
 
-#include "Town.h"
+#include "Actionable.h"
+#include "Player.h"
 
-class StandAlone {
-public:
-	static StandAlone* Instance();
+enum SceneType {
+	TOWN, COMBAT
+};
 
-	static orxSTATUS orxFASTCALL Init();
-	static orxSTATUS orxFASTCALL Run();
-
-	static void orxFASTCALL Exit();
-
-	static void orxFASTCALL Update(const orxCLOCK_INFO*, void*);
-
-	static orxSTATUS orxFASTCALL EventHandler(const orxEVENT*);
+class Scene {
 protected:
-	StandAlone();
-	StandAlone(const StandAlone&);
-	StandAlone& operator= (const StandAlone&);
-private:
-	static StandAlone* m_Instance;
-
-	static Scene *currentScene;
-	static Town *townScene;
-
-	static Player* player;
+	SceneType sceneType;
+	Player *player;
+	orxCAMERA *camera;
+public:
+	SceneType getSceneType();
+	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context) = 0;
+	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent) = 0;
 };
 
 #endif

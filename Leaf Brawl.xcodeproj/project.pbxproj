@@ -31,6 +31,8 @@
 		718BB83E21C018130028B298 /* Maps.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB81221BFABE80028B298 /* Maps.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83F21C018130028B298 /* Battle.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB83921BFF3CC0028B298 /* Battle.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB84121C063C70028B298 /* Platform.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB84021C063C20028B298 /* Platform.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB84521C0699E0028B298 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB84321C0699E0028B298 /* Scene.cpp */; };
+		718BB84821C069A50028B298 /* Town.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB84621C069A50028B298 /* Town.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -175,6 +177,10 @@
 		718BB83721BFF0230028B298 /* Elevator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elevator.h; sourceTree = "<group>"; };
 		718BB83921BFF3CC0028B298 /* Battle.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Battle.ini; sourceTree = "<group>"; };
 		718BB84021C063C20028B298 /* Platform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Platform.png; sourceTree = "<group>"; };
+		718BB84321C0699E0028B298 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		718BB84421C0699E0028B298 /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		718BB84621C069A50028B298 /* Town.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Town.cpp; sourceTree = "<group>"; };
+		718BB84721C069A50028B298 /* Town.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Town.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,7 @@
 				718BB82D21BFE50D0028B298 /* Actionable */,
 				718BB81D21BFAD2A0028B298 /* Assets */,
 				712B64AD21BDB1DD003A9718 /* Metadata */,
+				718BB84221C069830028B298 /* Scenes */,
 				712B643121BD984B003A9718 /* App */,
 				712B64A521BDAAEE003A9718 /* Entities */,
 				712B649621BD988D003A9718 /* bin */,
@@ -564,6 +571,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		718BB84221C069830028B298 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				718BB84321C0699E0028B298 /* Scene.cpp */,
+				718BB84421C0699E0028B298 /* Scene.h */,
+				718BB84621C069A50028B298 /* Town.cpp */,
+				718BB84721C069A50028B298 /* Town.h */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,6 +638,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718BB84821C069A50028B298 /* Town.cpp in Sources */,
+				718BB84521C0699E0028B298 /* Scene.cpp in Sources */,
 				712B64AB21BDAB49003A9718 /* Player.cpp in Sources */,
 				718BB83221BFE5370028B298 /* Actionable.cpp in Sources */,
 				718BB83521BFEDCA0028B298 /* PlayerIO.cpp in Sources */,
