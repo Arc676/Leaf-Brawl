@@ -24,6 +24,7 @@
 
 #include "orx.h"
 
+#include "Actionable.h"
 #include "Player.h"
 
 class StandAlone {

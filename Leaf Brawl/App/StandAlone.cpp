@@ -70,5 +70,37 @@ void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* contex
 }
 
 orxSTATUS orxFASTCALL StandAlone::EventHandler(const orxEVENT* currentEvent) {
+	switch (currentEvent->eType) {
+		case orxEVENT_TYPE_PHYSICS:
+			switch (currentEvent->eID) {
+				case orxPHYSICS_EVENT_CONTACT_ADD:
+				{
+					orxOBJECT* objs[] = {
+						orxOBJECT(currentEvent->hSender),
+						orxOBJECT(currentEvent->hRecipient)
+					};
+					for (int i = 0; i < 2; i++) {
+						orxSTRING name1 = (orxSTRING)orxObject_GetName(objs[i]);
+						orxSTRING name2 = (orxSTRING)orxObject_GetName(objs[1 - i]);
+						if (!orxString_Compare(name1, "Player")) {
+							orxConfig_PushSection(name2);
+							orxBOOL isActionable = orxConfig_GetBool("IsActionable");
+							orxConfig_PopSection();
+							if (isActionable) {
+								Actionable* act = (Actionable*)orxObject_GetUserData(objs[1 - i]);
+								player->approachActionable(act);
+							}
+						}
+					}
+					break;
+				}
+				default:
+					break;
+			}
+			break;
+
+		default:
+			break;
+	}
 	return orxSTATUS_SUCCESS;
 }

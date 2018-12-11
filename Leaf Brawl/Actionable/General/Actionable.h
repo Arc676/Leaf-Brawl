@@ -1,8 +1,8 @@
 //
-//  Player.hpp
+//  Actionable.hpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-11.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,31 +19,16 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Player_h
-#define Player_h
+#ifndef Actionable_h
+#define Actionable_h
 
 #include "Entity.h"
-#include "Actionable.h"
 
-enum InputState : int {
-	NONE  = 0b00,
-	LEFT  = 0b01,
-	RIGHT = 0b10,
-	BOTH  = 0b11
-};
+class Player;
 
-class Player : public Entity {
-	InputState inputState;
-
-	Actionable* currentActionable;
-
-	InputState computeState(bool left, bool right);
+class Actionable : public Entity {
 public:
-	Player();
-	void update(bool left, bool right, float dt);
-	InputState getInputState();
-
-	void approachActionable(Actionable* act);
+	virtual void action(Player* player) = 0;
 };
 
 #endif

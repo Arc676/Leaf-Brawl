@@ -45,6 +45,9 @@ void Player::update(bool left, bool right, float dt) {
 				case RIGHT:
 					break;
 				default:
+					if (currentActionable) {
+						currentActionable->action(this);
+					}
 					break;
 			}
 			break;
@@ -68,4 +71,8 @@ InputState Player::computeState(bool left, bool right) {
 
 InputState Player::getInputState() {
 	return inputState;
+}
+
+void Player::approachActionable(Actionable *act) {
+	currentActionable = act;
 }
