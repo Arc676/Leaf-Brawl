@@ -17,10 +17,12 @@
 		712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B021BDB66F003A9718 /* Player.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B121BDB710003A9718 /* Entity.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B221BDB72C003A9718 /* Actionable.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB80C21BFA3CB0028B298 /* Chestnut.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB80821BFA3BE0028B298 /* Chestnut.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB80D21BFA3CB0028B298 /* Hornbeam.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB80921BFA3BE0028B298 /* Hornbeam.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB80E21BFA3CB0028B298 /* Maple.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB80A21BFA3BE0028B298 /* Maple.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB80F21BFA3CB0028B298 /* Willow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB80B21BFA3BE0028B298 /* Willow.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82721BFAD350028B298 /* Chestnut.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB81F21BFAD2A0028B298 /* Chestnut.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82921BFAD350028B298 /* Hornbeam.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82121BFAD2A0028B298 /* Hornbeam.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82A21BFAD350028B298 /* Maple.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82221BFAD2A0028B298 /* Maple.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82B21BFAD350028B298 /* Willow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82321BFAD2A0028B298 /* Willow.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,10 +37,12 @@
 				712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */,
 				712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
-				718BB80C21BFA3CB0028B298 /* Chestnut.png in CopyFiles */,
-				718BB80D21BFA3CB0028B298 /* Hornbeam.png in CopyFiles */,
-				718BB80E21BFA3CB0028B298 /* Maple.png in CopyFiles */,
-				718BB80F21BFA3CB0028B298 /* Willow.png in CopyFiles */,
+				718BB82721BFAD350028B298 /* Chestnut.png in CopyFiles */,
+				718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */,
+				718BB82921BFAD350028B298 /* Hornbeam.png in CopyFiles */,
+				718BB82A21BFAD350028B298 /* Maple.png in CopyFiles */,
+				718BB82B21BFAD350028B298 /* Willow.png in CopyFiles */,
+				718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,11 +145,16 @@
 		712B64B021BDB66F003A9718 /* Player.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Player.ini; sourceTree = "<group>"; };
 		712B64B121BDB710003A9718 /* Entity.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entity.ini; sourceTree = "<group>"; };
 		712B64B221BDB72C003A9718 /* Actionable.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Actionable.ini; sourceTree = "<group>"; };
-		718BB80821BFA3BE0028B298 /* Chestnut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chestnut.png; sourceTree = "<group>"; };
-		718BB80921BFA3BE0028B298 /* Hornbeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hornbeam.png; sourceTree = "<group>"; };
-		718BB80A21BFA3BE0028B298 /* Maple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maple.png; sourceTree = "<group>"; };
-		718BB80B21BFA3BE0028B298 /* Willow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Willow.png; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
+		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
+		718BB81F21BFAD2A0028B298 /* Chestnut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chestnut.png; sourceTree = "<group>"; };
+		718BB82021BFAD2A0028B298 /* Diskette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diskette.png; sourceTree = "<group>"; };
+		718BB82121BFAD2A0028B298 /* Hornbeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hornbeam.png; sourceTree = "<group>"; };
+		718BB82221BFAD2A0028B298 /* Maple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maple.png; sourceTree = "<group>"; };
+		718BB82321BFAD2A0028B298 /* Willow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Willow.png; sourceTree = "<group>"; };
+		718BB82521BFAD2A0028B298 /* Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tiles.png; sourceTree = "<group>"; };
+		718BB82621BFAD2A0028B298 /* Town.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Town.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +189,7 @@
 		712B642921BD95FB003A9718 /* Leaf Brawl */ = {
 			isa = PBXGroup;
 			children = (
-				718BB80621BFA3BE0028B298 /* Assets */,
+				718BB81D21BFAD2A0028B298 /* Assets */,
 				712B64AD21BDB1DD003A9718 /* Metadata */,
 				712B643121BD984B003A9718 /* App */,
 				712B64A521BDAAEE003A9718 /* Entities */,
@@ -421,6 +430,8 @@
 				712B64B021BDB66F003A9718 /* Player.ini */,
 				712B64B121BDB710003A9718 /* Entity.ini */,
 				712B64B221BDB72C003A9718 /* Actionable.ini */,
+				718BB81121BFAB170028B298 /* Town.ini */,
+				718BB81221BFABE80028B298 /* Maps.ini */,
 			);
 			path = bin;
 			sourceTree = SOURCE_ROOT;
@@ -464,23 +475,34 @@
 			path = Metadata;
 			sourceTree = "<group>";
 		};
-		718BB80621BFA3BE0028B298 /* Assets */ = {
+		718BB81D21BFAD2A0028B298 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				718BB80721BFA3BE0028B298 /* Sprites */,
+				718BB81E21BFAD2A0028B298 /* Sprites */,
+				718BB82421BFAD2A0028B298 /* Tiled */,
 			);
 			path = Assets;
 			sourceTree = SOURCE_ROOT;
 		};
-		718BB80721BFA3BE0028B298 /* Sprites */ = {
+		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				718BB80821BFA3BE0028B298 /* Chestnut.png */,
-				718BB80921BFA3BE0028B298 /* Hornbeam.png */,
-				718BB80A21BFA3BE0028B298 /* Maple.png */,
-				718BB80B21BFA3BE0028B298 /* Willow.png */,
+				718BB81F21BFAD2A0028B298 /* Chestnut.png */,
+				718BB82021BFAD2A0028B298 /* Diskette.png */,
+				718BB82121BFAD2A0028B298 /* Hornbeam.png */,
+				718BB82221BFAD2A0028B298 /* Maple.png */,
+				718BB82321BFAD2A0028B298 /* Willow.png */,
 			);
 			path = Sprites;
+			sourceTree = "<group>";
+		};
+		718BB82421BFAD2A0028B298 /* Tiled */ = {
+			isa = PBXGroup;
+			children = (
+				718BB82521BFAD2A0028B298 /* Tiles.png */,
+				718BB82621BFAD2A0028B298 /* Town.tmx */,
+			);
+			path = Tiled;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
