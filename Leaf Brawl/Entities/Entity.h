@@ -34,11 +34,10 @@ protected:
 	orxVECTOR pos;
 	orxOBJECT* entity;
 	orxBODY* body;
-	
-	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
 
 	Entity();
 public:
+	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
 	int getHP();
 	orxVECTOR getPosition();
 	orxOBJECT* getEntity();

@@ -1,8 +1,8 @@
 //
-//  Player.h
+//  Elevator.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-11.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,44 +19,17 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Player_h
-#define Player_h
+#ifndef Elevator_h
+#define Elevator_h
 
-#include "Entity.h"
 #include "Actionable.h"
 
-enum InputState : int {
-	NONE  = 0b00,
-	LEFT  = 0b01,
-	RIGHT = 0b10,
-	BOTH  = 0b11
-};
-
-enum PlayerStyle {
-	MAPLE,
-	HORNBEAM,
-	CHESTNUT,
-	WILLOW
-};
-
-class Player : public Entity {
-	PlayerStyle style = HORNBEAM;
-
-	InputState inputState;
-
-	Actionable* currentActionable = nullptr;
-
-	InputState computeState(bool left, bool right);
+class Elevator : public Actionable {
+	orxVECTOR elevatorAcc;
 public:
-	Player();
-
-	void update(bool left, bool right, float dt);
-	InputState getInputState();
-
-	PlayerStyle getStyle();
-
-	void approachActionable(Actionable* act);
-	void leaveActionable();
+	Elevator(orxVECTOR pos);
+	virtual void action(Player* player);
+	virtual void controlLoss();
 };
 
 #endif

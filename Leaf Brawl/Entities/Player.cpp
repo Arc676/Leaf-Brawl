@@ -24,6 +24,7 @@
 Player::Player() : Entity() {
 	orxInput_Load(orxSTRING_EMPTY);
 	entity = orxObject_CreateFromConfig("Player");
+	orxObject_SetUserData(entity, this);
 	body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
 	pos = Entity::createVector(0, 10, 0);
 	orxObject_SetPosition(entity, &pos);
@@ -78,6 +79,10 @@ InputState Player::getInputState() {
 
 void Player::approachActionable(Actionable *act) {
 	currentActionable = act;
+}
+
+void Player::leaveActionable() {
+	currentActionable = nullptr;
 }
 
 PlayerStyle Player::getStyle() {

@@ -30,6 +30,7 @@
 		718BB83D21C018130028B298 /* Town.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB81121BFAB170028B298 /* Town.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83E21C018130028B298 /* Maps.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB81221BFABE80028B298 /* Maps.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83F21C018130028B298 /* Battle.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB83921BFF3CC0028B298 /* Battle.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		718BB84121C063C70028B298 /* Platform.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB84021C063C20028B298 /* Platform.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 				718BB83F21C018130028B298 /* Battle.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
+				718BB84121C063C70028B298 /* Platform.png in CopyFiles */,
 				718BB82721BFAD350028B298 /* Chestnut.png in CopyFiles */,
 				718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */,
 				718BB82921BFAD350028B298 /* Hornbeam.png in CopyFiles */,
@@ -172,6 +174,7 @@
 		718BB83621BFF0230028B298 /* Elevator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Elevator.cpp; sourceTree = "<group>"; };
 		718BB83721BFF0230028B298 /* Elevator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elevator.h; sourceTree = "<group>"; };
 		718BB83921BFF3CC0028B298 /* Battle.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Battle.ini; sourceTree = "<group>"; };
+		718BB84021C063C20028B298 /* Platform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Platform.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +510,7 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				718BB84021C063C20028B298 /* Platform.png */,
 				718BB81F21BFAD2A0028B298 /* Chestnut.png */,
 				718BB82021BFAD2A0028B298 /* Diskette.png */,
 				718BB82121BFAD2A0028B298 /* Hornbeam.png */,

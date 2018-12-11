@@ -29,6 +29,7 @@ class Player;
 class Actionable : public Entity {
 public:
 	virtual void action(Player* player) = 0;
+	virtual void controlLoss() = 0;
 };
 
 #endif
