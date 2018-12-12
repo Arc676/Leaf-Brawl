@@ -28,6 +28,7 @@ Player::Player() : Entity() {
 	body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
 	pos = Entity::createVector(0, 10, 0);
 	orxObject_SetPosition(entity, &pos);
+	orxObject_SetCustomGravity(entity, &orxVECTOR_0);
 }
 
 void Player::update(bool left, bool right, float dt) {

@@ -31,6 +31,8 @@ class StandAlone {
 public:
 	static StandAlone* Instance();
 
+	static void paintTiles(const orxSTRING mapSection, const orxVECTOR startPos);
+
 	static orxSTATUS orxFASTCALL Init();
 	static orxSTATUS orxFASTCALL Run();
 
