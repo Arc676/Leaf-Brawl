@@ -73,7 +73,7 @@ void StandAlone::paintTiles(const orxSTRING mapSection, const orxVECTOR startPos
 			position.fZ = orxFLOAT_0;
 
 			orxCHAR formattedTileObject[30]; //good maximum length
-			orxString_Print(formattedTileObject, "Combat", tile);
+			orxString_Print(formattedTileObject, "Tiles2102Object", tile);
 
 			orxOBJECT *obj = orxObject_CreateFromConfig(formattedTileObject);
 
@@ -108,7 +108,10 @@ orxSTATUS orxFASTCALL StandAlone::Init() {
 
 	orxConfig_Load("Arena.ini");
 	orxVECTOR arenaPos = Entity::createVector(1000, 200, 0);
-	paintTiles("ArenaTiles", arenaPos);
+	paintTiles("ArenaTiles", arenaPos); // second argument currently does nothing
+	orxOBJECT *tile = orxObject_CreateFromConfig("Tiles2102Object");
+	orxVECTOR pos = player->getPosition();
+	orxObject_SetPosition(tile, &pos);
 
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);

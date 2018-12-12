@@ -16,6 +16,7 @@
 		7120912A21C1A57B00F6DD80 /* Weapon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120912821C1A57B00F6DD80 /* Weapon.cpp */; };
 		7120912C21C1AA8400F6DD80 /* Tiles2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912B21C1AA7D00F6DD80 /* Tiles2.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912F21C1BF9300F6DD80 /* ToTown.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7120913121C1C1DA00F6DD80 /* Arena.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912D21C1B6D500F6DD80 /* Arena.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B643521BD984C003A9718 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643221BD984B003A9718 /* Main.cpp */; };
 		712B643621BD984C003A9718 /* StandAlone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643321BD984B003A9718 /* StandAlone.cpp */; };
 		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -54,6 +55,7 @@
 				718BB83D21C018130028B298 /* Town.ini in CopyFiles */,
 				718BB83E21C018130028B298 /* Maps.ini in CopyFiles */,
 				718BB83F21C018130028B298 /* Combat.ini in CopyFiles */,
+				7120913121C1C1DA00F6DD80 /* Arena.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
 				7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */,
