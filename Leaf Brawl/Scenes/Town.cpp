@@ -21,9 +21,7 @@
 
 #include "Town.h"
 
-Town::Town(Player *player, orxCAMERA *camera) {
-	this->player = player;
-	this->camera = camera;
+Town::Town(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	sceneType = TOWN;
 
 	orxVECTOR spawnPos = Entity::createVector(1000, 700, 0);
@@ -43,11 +41,7 @@ SceneType Town::update(const orxCLOCK_INFO *clockInfo, void *context) {
 				   orxInput_IsActive("InputLeft"),
 				   orxInput_IsActive("InputRight"),
 				   clockInfo->fDT);
-	orxVECTOR camPos;
-	orxCamera_GetPosition(camera, &camPos);
-	camPos.fX = player->getPosition().fX;
-	camPos.fY = player->getPosition().fY;
-	orxCamera_SetPosition(camera, &camPos);
+	updateCamera();
 	return TOWN;
 }
 

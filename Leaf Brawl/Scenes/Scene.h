@@ -36,8 +36,13 @@ protected:
 	SceneType sceneType;
 	Player *player;
 	orxCAMERA *camera;
+
+	Scene(Player *player, orxCAMERA *camera);
+
+	void updateCamera();
 public:
 	SceneType getSceneType();
+
 	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context) = 0;
 	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent) = 0;
 };

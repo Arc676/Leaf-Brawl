@@ -21,6 +21,19 @@
 
 #include "Scene.h"
 
+Scene::Scene(Player *player, orxCAMERA *camera) {
+	this->player = player;
+	this->camera = camera;
+}
+
+void Scene::updateCamera() {
+	orxVECTOR camPos;
+	orxCamera_GetPosition(camera, &camPos);
+	camPos.fX = player->getPosition().fX;
+	camPos.fY = player->getPosition().fY;
+	orxCamera_SetPosition(camera, &camPos);
+}
+
 SceneType Scene::getSceneType() {
 	return sceneType;
 }
