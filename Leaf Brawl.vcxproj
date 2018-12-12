@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Leaf Brawl\Actionable\Environment\Elevator.cpp" />
+    <ClCompile Include="Leaf Brawl\Actionable\Environment\PlayerIO.cpp" />
+    <ClCompile Include="Leaf Brawl\Actionable\Environment\SceneTransition.cpp" />
+    <ClCompile Include="Leaf Brawl\Actionable\Environment\StyleChanger.cpp" />
+    <ClCompile Include="Leaf Brawl\Actionable\General\Actionable.cpp" />
+    <ClCompile Include="Leaf Brawl\Actionable\Items\Weapon.cpp" />
+    <ClCompile Include="Leaf Brawl\App\Main.cpp" />
+    <ClCompile Include="Leaf Brawl\App\StandAlone.cpp" />
+    <ClCompile Include="Leaf Brawl\Entities\Entity.cpp" />
+    <ClCompile Include="Leaf Brawl\Entities\Player.cpp" />
+    <ClCompile Include="Leaf Brawl\Scenes\Combat.cpp" />
+    <ClCompile Include="Leaf Brawl\Scenes\Scene.cpp" />
+    <ClCompile Include="Leaf Brawl\Scenes\Town.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\anim\orxAnim.h" />
+    <ClInclude Include="inc\anim\orxAnimPointer.h" />
+    <ClInclude Include="inc\anim\orxAnimSet.h" />
+    <ClInclude Include="inc\base\orxBuild.h" />
+    <ClInclude Include="inc\base\orxDecl.h" />
+    <ClInclude Include="inc\base\orxModule.h" />
+    <ClInclude Include="inc\base\orxType.h" />
+    <ClInclude Include="inc\base\orxVersion.h" />
+    <ClInclude Include="inc\core\orxClock.h" />
+    <ClInclude Include="inc\core\orxCommand.h" />
+    <ClInclude Include="inc\core\orxConfig.h" />
+    <ClInclude Include="inc\core\orxConsole.h" />
+    <ClInclude Include="inc\core\orxEvent.h" />
+    <ClInclude Include="inc\core\orxLocale.h" />
+    <ClInclude Include="inc\core\orxResource.h" />
+    <ClInclude Include="inc\core\orxSystem.h" />
+    <ClInclude Include="inc\core\orxThread.h" />
+    <ClInclude Include="inc\debug\orxDebug.h" />
+    <ClInclude Include="inc\debug\orxFPS.h" />
+    <ClInclude Include="inc\debug\orxProfiler.h" />
+    <ClInclude Include="inc\display\orxDisplay.h" />
+    <ClInclude Include="inc\display\orxFont.h" />
+    <ClInclude Include="inc\display\orxGraphic.h" />
+    <ClInclude Include="inc\display\orxScreenshot.h" />
+    <ClInclude Include="inc\display\orxText.h" />
+    <ClInclude Include="inc\display\orxTexture.h" />
+    <ClInclude Include="inc\io\orxFile.h" />
+    <ClInclude Include="inc\io\orxInput.h" />
+    <ClInclude Include="inc\io\orxJoystick.h" />
+    <ClInclude Include="inc\io\orxKeyboard.h" />
+    <ClInclude Include="inc\io\orxMouse.h" />
+    <ClInclude Include="inc\main\orxAndroid.h" />
+    <ClInclude Include="inc\main\orxParam.h" />
+    <ClInclude Include="inc\math\orxAABox.h" />
+    <ClInclude Include="inc\math\orxMath.h" />
+    <ClInclude Include="inc\math\orxOBox.h" />
+    <ClInclude Include="inc\math\orxVector.h" />
+    <ClInclude Include="inc\memory\orxBank.h" />
+    <ClInclude Include="inc\memory\orxMemory.h" />
+    <ClInclude Include="inc\object\orxFrame.h" />
+    <ClInclude Include="inc\object\orxFX.h" />
+    <ClInclude Include="inc\object\orxFXPointer.h" />
+    <ClInclude Include="inc\object\orxObject.h" />
+    <ClInclude Include="inc\object\orxSpawner.h" />
+    <ClInclude Include="inc\object\orxStructure.h" />
+    <ClInclude Include="inc\object\orxTimeLine.h" />
+    <ClInclude Include="inc\orx.h" />
+    <ClInclude Include="inc\orxInclude.h" />
+    <ClInclude Include="inc\orxKernel.h" />
+    <ClInclude Include="inc\orxPluginAPI.h" />
+    <ClInclude Include="inc\orxUtils.h" />
+    <ClInclude Include="inc\physics\orxBody.h" />
+    <ClInclude Include="inc\physics\orxPhysics.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_CoreDefine.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_CoreID.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Display.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Joystick.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Keyboard.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Mouse.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Physics.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_Render.h" />
+    <ClInclude Include="inc\plugin\define\orxPlugin_SoundSystem.h" />
+    <ClInclude Include="inc\plugin\orxPlugin.h" />
+    <ClInclude Include="inc\plugin\orxPluginCore.h" />
+    <ClInclude Include="inc\plugin\orxPluginType.h" />
+    <ClInclude Include="inc\plugin\orxPluginUser.h" />
+    <ClInclude Include="inc\render\orxCamera.h" />
+    <ClInclude Include="inc\render\orxRender.h" />
+    <ClInclude Include="inc\render\orxShader.h" />
+    <ClInclude Include="inc\render\orxShaderPointer.h" />
+    <ClInclude Include="inc\render\orxViewport.h" />
+    <ClInclude Include="inc\sound\orxSound.h" />
+    <ClInclude Include="inc\sound\orxSoundPointer.h" />
+    <ClInclude Include="inc\sound\orxSoundSystem.h" />
+    <ClInclude Include="inc\utils\orxHashTable.h" />
+    <ClInclude Include="inc\utils\orxLinkList.h" />
+    <ClInclude Include="inc\utils\orxString.h" />
+    <ClInclude Include="inc\utils\orxTree.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\Environment\Elevator.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\Environment\PlayerIO.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\Environment\SceneTransition.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\Environment\StyleChanger.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\General\Actionable.h" />
+    <ClInclude Include="Leaf Brawl\Actionable\Items\Weapon.h" />
+    <ClInclude Include="Leaf Brawl\App\Enums.h" />
+    <ClInclude Include="Leaf Brawl\App\StandAlone.h" />
+    <ClInclude Include="Leaf Brawl\Entities\Entity.h" />
+    <ClInclude Include="Leaf Brawl\Entities\Player.h" />
+    <ClInclude Include="Leaf Brawl\Scenes\Combat.h" />
+    <ClInclude Include="Leaf Brawl\Scenes\Scene.h" />
+    <ClInclude Include="Leaf Brawl\Scenes\Town.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\orx.lib" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AB3A12E5-C394-49C9-9531-538BDD2CF5EF}</ProjectGuid>
+    <RootNamespace>LeafBrawl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>Leaf Brawl\Actionable\General;Leaf Brawl\Actionable\Items;Leaf Brawl\Actionable\Environment;Leaf Brawl\App;Leaf Brawl\Scenes;Leaf Brawl\Entities;inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\lib;$(ORX)\lib\dynamic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>Leaf Brawl\Actionable\General;Leaf Brawl\Actionable\Items;Leaf Brawl\Actionable\Environment;Leaf Brawl\App;Leaf Brawl\Scenes;Leaf Brawl\Entities;inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>lib;..\..\..\lib;$(ORX)\lib\dynamic;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>orx.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
