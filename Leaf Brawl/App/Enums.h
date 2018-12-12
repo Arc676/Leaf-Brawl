@@ -1,8 +1,8 @@
 //
-//  Scene.h
+//  Enums.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-11.
+//  Created by Alessandro Vinciguerra on 2018-12-12.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,30 +19,18 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Scene_h
-#define Scene_h
+#ifndef Enums_h
+#define Enums_h
 
-#include "orx.h"
+enum SceneType {
+	TOWN, COMBAT
+};
 
-#include "Actionable.h"
-#include "Player.h"
-#include "Enums.h"
-
-class Scene {
-protected:
-	SceneType sceneType;
-	Player *player;
-	orxVECTOR spawnPoint;
-	orxCAMERA *camera;
-
-	Scene(Player *player, orxCAMERA *camera);
-public:
-	SceneType getSceneType();
-
-	virtual void activate();
-
-	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context);
-	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent);
+enum LeafStyle : int {
+	MAPLE,
+	HORNBEAM,
+	CHESTNUT,
+	WILLOW
 };
 
 #endif

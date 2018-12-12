@@ -1,8 +1,8 @@
 //
-//  Scene.h
+//  SceneTransition.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-11.
+//  Created by Alessandro Vinciguerra on 2018-12-12.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,30 +19,26 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Scene_h
-#define Scene_h
+#include "SceneTransition.h"
 
-#include "orx.h"
+SceneTransition::SceneTransition(orxVECTOR pos, SceneType destSceneType) {
+	destScene = destSceneType;
+	switch (destScene) {
+		case COMBAT:
+			entity = orxObject_CreateFromConfig("Combat");
+			break;
+		default:
+			return;
+	}
+	orxObject_SetUserData(entity, this);
+	orxObject_SetPosition(entity, &pos);
+	orxVector_Copy(&(this->pos), &pos);
+}
 
-#include "Actionable.h"
-#include "Player.h"
-#include "Enums.h"
+void SceneTransition::action(Player *player) {
+	wasActivated = orxTRUE;
+}
 
-class Scene {
-protected:
-	SceneType sceneType;
-	Player *player;
-	orxVECTOR spawnPoint;
-	orxCAMERA *camera;
-
-	Scene(Player *player, orxCAMERA *camera);
-public:
-	SceneType getSceneType();
-
-	virtual void activate();
-
-	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context);
-	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent);
-};
-
-#endif
+orxBOOL SceneTransition::getActivation() {
+	return wasActivated;
+}

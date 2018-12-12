@@ -24,12 +24,7 @@
 
 #include "orx.h"
 
-enum LeafStyle : int {
-	MAPLE,
-	HORNBEAM,
-	CHESTNUT,
-	WILLOW
-};
+#include "Enums.h"
 
 class Entity {
 protected:

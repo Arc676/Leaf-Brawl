@@ -24,8 +24,8 @@
 Town::Town(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	sceneType = TOWN;
 
-	orxVECTOR spawnPos = Entity::createVector(1000, 700, 0);
-	player->setPosition(spawnPos);
+	spawnPoint = Entity::createVector(1000, 700, 0);
+	player->setPosition(spawnPoint);
 
 	orxVECTOR elevPos = Entity::createVector(2350, 700, 0);
 	new Elevator(elevPos);
@@ -33,55 +33,24 @@ Town::Town(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	orxVECTOR stylePos = Entity::createVector(325, 675, 0);
 	new StyleChanger(stylePos);
 
+	orxVECTOR savePos = Entity::createVector(75, 675, 0);
+	new PlayerIO(savePos);
+
+	orxVECTOR combatPos = Entity::createVector(725, 375, 0);
+	toCombat = new SceneTransition(combatPos, COMBAT);
+
 	orxObject_CreateFromConfig("Town");
 }
 
 SceneType Town::update(const orxCLOCK_INFO *clockInfo, void *context) {
-	player->update(
-				   orxInput_IsActive("InputLeft"),
-				   orxInput_IsActive("InputRight"),
-				   clockInfo->fDT);
-	updateCamera();
+	Scene::update(clockInfo, context);
+	if (toCombat->getActivation()) {
+		player->leaveActionable();
+		return COMBAT;
+	}
 	return TOWN;
 }
 
 orxSTATUS Town::EventHandler(const orxEVENT *currentEvent) {
-	switch (currentEvent->eType) {
-		case orxEVENT_TYPE_PHYSICS:
-		{
-			orxOBJECT* objs[] = {
-				orxOBJECT(currentEvent->hSender),
-				orxOBJECT(currentEvent->hRecipient)
-			};
-			switch (currentEvent->eID) {
-				case orxPHYSICS_EVENT_CONTACT_ADD:
-				case orxPHYSICS_EVENT_CONTACT_REMOVE:
-					for (int i = 0; i < 2; i++) {
-						orxSTRING name1 = (orxSTRING)orxObject_GetName(objs[i]);
-						orxSTRING name2 = (orxSTRING)orxObject_GetName(objs[1 - i]);
-						if (!orxString_Compare(name1, "Player")) {
-							orxConfig_PushSection(name2);
-							orxBOOL isActionable = orxConfig_GetBool("IsActionable");
-							orxConfig_PopSection();
-							if (isActionable) {
-								Actionable* act = (Actionable*)orxObject_GetUserData(objs[1 - i]);
-								if (currentEvent->eID == orxPHYSICS_EVENT_CONTACT_ADD) {
-									player->approachActionable(act);
-								} else {
-									player->leaveActionable();
-									act->controlLoss();
-								}
-							}
-						}
-					}
-					break;
-				default:
-					break;
-			}
-			break;
-		}
-		default:
-			break;
-	}
-	return orxSTATUS_SUCCESS;
+	return Scene::EventHandler(currentEvent);
 }

@@ -22,8 +22,16 @@
 #include "StandAlone.h"
 
 StandAlone* StandAlone::m_Instance = orxNULL;
+
 Scene* StandAlone::currentScene = orxNULL;
+orxVIEWPORT* StandAlone::currentViewport = orxNULL;
+
 Town* StandAlone::townScene = orxNULL;
+orxVIEWPORT* StandAlone::townViewport = orxNULL;
+
+Combat* StandAlone::combatScene = orxNULL;
+orxVIEWPORT* StandAlone::combatViewport = orxNULL;
+
 Player* StandAlone::player = orxNULL;
 
 StandAlone* StandAlone::Instance() {
@@ -39,11 +47,18 @@ StandAlone::StandAlone() {}
 orxSTATUS orxFASTCALL StandAlone::Init() {
 	player = new Player();
 
-	orxVIEWPORT* viewport = orxViewport_CreateFromConfig("MainViewport");
-	orxCAMERA *townCam = orxViewport_GetCamera(viewport);
+	townViewport = orxViewport_CreateFromConfig("MainViewport");
+	orxCAMERA *townCam = orxViewport_GetCamera(townViewport);
 
 	townScene = new Town(player, townCam);
 	currentScene = townScene;
+	currentViewport = townViewport;
+
+	combatViewport = orxViewport_CreateFromConfig("BattleViewport");
+	orxViewport_Enable(combatViewport, orxFALSE);
+	orxCAMERA *battleCam = orxViewport_GetCamera(combatViewport);
+
+	combatScene = new Combat(player, battleCam);
 	
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
@@ -62,7 +77,24 @@ void orxFASTCALL StandAlone::Exit() {
 }
 
 void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* context) {
-	currentScene->update(clockInfo, context);
+	SceneType nextScene = currentScene->update(clockInfo, context);
+	if (nextScene != currentScene->getSceneType()) {
+		orxViewport_Enable(currentViewport, orxFALSE);
+		switch (nextScene) {
+			case TOWN:
+				currentViewport = townViewport;
+				currentScene = townScene;
+				break;
+			case COMBAT:
+				currentViewport = combatViewport;
+				currentScene = combatScene;
+				break;
+			default:
+				break;
+		}
+		currentScene->activate();
+		orxViewport_Enable(currentViewport, orxTRUE);
+	}
 }
 
 orxSTATUS orxFASTCALL StandAlone::EventHandler(const orxEVENT* currentEvent) {

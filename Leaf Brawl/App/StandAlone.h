@@ -25,6 +25,7 @@
 #include "orx.h"
 
 #include "Town.h"
+#include "Combat.h"
 
 class StandAlone {
 public:
@@ -46,7 +47,13 @@ private:
 	static StandAlone* m_Instance;
 
 	static Scene *currentScene;
+	static orxVIEWPORT *currentViewport;
+
 	static Town *townScene;
+	static orxVIEWPORT *townViewport;
+
+	static Combat *combatScene;
+	static orxVIEWPORT *combatViewport;
 
 	static Player* player;
 };

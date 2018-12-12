@@ -26,14 +26,64 @@ Scene::Scene(Player *player, orxCAMERA *camera) {
 	this->camera = camera;
 }
 
-void Scene::updateCamera() {
+SceneType Scene::update(const orxCLOCK_INFO* clockInfo, void* context) {
+	player->update(
+				   orxInput_IsActive("InputLeft"),
+				   orxInput_IsActive("InputRight"),
+				   clockInfo->fDT);
 	orxVECTOR camPos;
 	orxCamera_GetPosition(camera, &camPos);
 	camPos.fX = player->getPosition().fX;
 	camPos.fY = player->getPosition().fY;
 	orxCamera_SetPosition(camera, &camPos);
+	return getSceneType();
+}
+
+orxSTATUS Scene::EventHandler(const orxEVENT *currentEvent) {
+	switch (currentEvent->eType) {
+		case orxEVENT_TYPE_PHYSICS:
+		{
+			orxOBJECT* objs[] = {
+				orxOBJECT(currentEvent->hSender),
+				orxOBJECT(currentEvent->hRecipient)
+			};
+			switch (currentEvent->eID) {
+				case orxPHYSICS_EVENT_CONTACT_ADD:
+				case orxPHYSICS_EVENT_CONTACT_REMOVE:
+					for (int i = 0; i < 2; i++) {
+						orxSTRING name1 = (orxSTRING)orxObject_GetName(objs[i]);
+						orxSTRING name2 = (orxSTRING)orxObject_GetName(objs[1 - i]);
+						if (!orxString_Compare(name1, "Player")) {
+							orxConfig_PushSection(name2);
+							orxBOOL isActionable = orxConfig_GetBool("IsActionable");
+							orxConfig_PopSection();
+							if (isActionable) {
+								Actionable* act = (Actionable*)orxObject_GetUserData(objs[1 - i]);
+								if (currentEvent->eID == orxPHYSICS_EVENT_CONTACT_ADD) {
+									player->approachActionable(act);
+								} else {
+									player->leaveActionable();
+									act->controlLoss();
+								}
+							}
+						}
+					}
+					break;
+				default:
+					break;
+			}
+			break;
+		}
+		default:
+			break;
+	}
+	return orxSTATUS_SUCCESS;
 }
 
 SceneType Scene::getSceneType() {
 	return sceneType;
+}
+
+void Scene::activate() {
+	player->setPosition(spawnPoint);
 }

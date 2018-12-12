@@ -25,8 +25,11 @@
 #include "Scene.h"
 #include "Elevator.h"
 #include "StyleChanger.h"
+#include "PlayerIO.h"
+#include "SceneTransition.h"
 
 class Town : public Scene {
+	SceneTransition *toCombat;
 public:
 	Town(Player *player, orxCAMERA *camera);
 

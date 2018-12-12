@@ -1,8 +1,8 @@
 //
-//  Scene.h
+//  Combat.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-11.
+//  Created by Alessandro Vinciguerra on 2018-12-12.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,30 +19,21 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Scene_h
-#define Scene_h
+#include "Combat.h"
 
-#include "orx.h"
+Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
+	sceneType = COMBAT;
 
-#include "Actionable.h"
-#include "Player.h"
-#include "Enums.h"
+	spawnPoint = Entity::createVector(3950, 350, 0);
 
-class Scene {
-protected:
-	SceneType sceneType;
-	Player *player;
-	orxVECTOR spawnPoint;
-	orxCAMERA *camera;
+	orxObject_CreateFromConfig("Arena");
+}
 
-	Scene(Player *player, orxCAMERA *camera);
-public:
-	SceneType getSceneType();
+SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
+	Scene::update(clockInfo, context);
+	return COMBAT;
+}
 
-	virtual void activate();
-
-	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context);
-	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent);
-};
-
-#endif
+orxSTATUS Combat::EventHandler(const orxEVENT *currentEvent) {
+	return Scene::EventHandler(currentEvent);
+}
