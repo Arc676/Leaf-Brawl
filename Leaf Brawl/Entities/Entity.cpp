@@ -23,7 +23,7 @@
 
 Entity::Entity() {
 	hp = 100;
-	jumpForce = createVector(0, -10, 0);
+	jumpForce = createVector(0, -250, 0);
 }
 
 orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
@@ -49,4 +49,33 @@ void Entity::setPosition(orxVECTOR newpos) {
 
 orxOBJECT* Entity::getEntity() {
 	return entity;
+}
+
+LeafStyle Entity::getStyle() {
+	return style;
+}
+
+void Entity::cycleStyle() {
+	LeafStyle newStyle = (LeafStyle)((style + 1) % (WILLOW + 1));
+	setStyle(newStyle);
+}
+
+void Entity::setStyle(LeafStyle style) {
+	this->style = style;
+	orxObject_SetTargetAnim(entity, Entity::styleToName(style));
+}
+
+orxSTRING Entity::styleToName(LeafStyle style) {
+	switch (style) {
+		case MAPLE:
+			return (orxSTRING)"Maple";
+		case HORNBEAM:
+			return (orxSTRING)"Hornbeam";
+		case CHESTNUT:
+			return (orxSTRING)"Chestnut";
+		case WILLOW:
+			return (orxSTRING)"Willow";
+		default:
+			return (orxSTRING)"";
+	}
 }

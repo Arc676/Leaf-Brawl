@@ -32,16 +32,7 @@ enum InputState : int {
 	BOTH  = 0b11
 };
 
-enum PlayerStyle {
-	MAPLE,
-	HORNBEAM,
-	CHESTNUT,
-	WILLOW
-};
-
 class Player : public Entity {
-	PlayerStyle style = HORNBEAM;
-
 	InputState inputState;
 
 	Actionable* currentActionable = nullptr;
@@ -52,8 +43,6 @@ public:
 
 	void update(bool left, bool right, float dt);
 	InputState getInputState();
-
-	PlayerStyle getStyle();
 
 	void approachActionable(Actionable* act);
 	void leaveActionable();

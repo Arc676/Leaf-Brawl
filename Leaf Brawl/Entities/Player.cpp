@@ -46,12 +46,14 @@ void Player::update(bool left, bool right, float dt) {
 					break;
 				case RIGHT:
 					break;
-				default:
+				case NONE:
 					if (currentActionable) {
 						currentActionable->action(this);
 					} else {
 						orxBody_ApplyForce(body, &jumpForce, orxNULL);
 					}
+					break;
+				default:
 					break;
 			}
 			break;
@@ -83,8 +85,4 @@ void Player::approachActionable(Actionable *act) {
 
 void Player::leaveActionable() {
 	currentActionable = nullptr;
-}
-
-PlayerStyle Player::getStyle() {
-	return style;
 }

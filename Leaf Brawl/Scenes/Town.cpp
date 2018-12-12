@@ -26,11 +26,14 @@ Town::Town(Player *player, orxCAMERA *camera) {
 	this->camera = camera;
 	sceneType = TOWN;
 
-	orxVECTOR spawnPos = Entity::createVector(375, 700, 0);
+	orxVECTOR spawnPos = Entity::createVector(1000, 700, 0);
 	player->setPosition(spawnPos);
 
 	orxVECTOR elevPos = Entity::createVector(2350, 700, 0);
 	new Elevator(elevPos);
+
+	orxVECTOR stylePos = Entity::createVector(325, 675, 0);
+	new StyleChanger(stylePos);
 
 	orxObject_CreateFromConfig("Town");
 }

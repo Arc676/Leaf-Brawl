@@ -1,8 +1,8 @@
 //
-//  Actionable.cpp
+//  StyleChanger.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-11.
+//  Created by Alessandro Vinciguerra on 2018-12-12.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,6 +19,16 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#include "Actionable.h"
+#include "StyleChanger.h"
+#include "Player.h"
 
-void Actionable::controlLoss() {}
+StyleChanger::StyleChanger(orxVECTOR pos) {
+	entity = orxObject_CreateFromConfig("StyleChanger");
+	orxObject_SetUserData(entity, this);
+	orxObject_SetPosition(entity, &pos);
+	orxVector_Copy(&(this->pos), &pos);
+}
+
+void StyleChanger::action(Player *player) {
+	player->cycleStyle();
+}

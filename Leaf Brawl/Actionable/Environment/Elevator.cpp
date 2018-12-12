@@ -26,6 +26,7 @@ Elevator::Elevator(orxVECTOR pos) {
 	entity = orxObject_CreateFromConfig("Elevator");
 	orxObject_SetUserData(entity, this);
 	orxObject_SetPosition(entity, &pos);
+	orxVector_Copy(&(this->pos), &pos);
 }
 
 void Elevator::action(Player *player) {

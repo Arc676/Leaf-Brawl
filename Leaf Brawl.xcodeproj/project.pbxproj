@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7120911921C0E8DC00F6DD80 /* StyleChanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */; };
+		7120911B21C0ECE900F6DD80 /* Leaves.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120911A21C0ECE600F6DD80 /* Leaves.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120911C21C1041E00F6DD80 /* StyleChanger.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B643521BD984C003A9718 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643221BD984B003A9718 /* Main.cpp */; };
 		712B643621BD984C003A9718 /* StandAlone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643321BD984B003A9718 /* StandAlone.cpp */; };
 		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -16,11 +19,7 @@
 		712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B021BDB66F003A9718 /* Player.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B121BDB710003A9718 /* Entity.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B221BDB72C003A9718 /* Actionable.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB82721BFAD350028B298 /* Chestnut.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB81F21BFAD2A0028B298 /* Chestnut.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB82921BFAD350028B298 /* Hornbeam.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82121BFAD2A0028B298 /* Hornbeam.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB82A21BFAD350028B298 /* Maple.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82221BFAD2A0028B298 /* Maple.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		718BB82B21BFAD350028B298 /* Willow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82321BFAD2A0028B298 /* Willow.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
 		718BB83521BFEDCA0028B298 /* PlayerIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83321BFEDCA0028B298 /* PlayerIO.cpp */; };
@@ -51,12 +50,10 @@
 				718BB83F21C018130028B298 /* Battle.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
+				7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */,
+				7120911B21C0ECE900F6DD80 /* Leaves.png in CopyFiles */,
 				718BB84121C063C70028B298 /* Platform.png in CopyFiles */,
-				718BB82721BFAD350028B298 /* Chestnut.png in CopyFiles */,
 				718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */,
-				718BB82921BFAD350028B298 /* Hornbeam.png in CopyFiles */,
-				718BB82A21BFAD350028B298 /* Maple.png in CopyFiles */,
-				718BB82B21BFAD350028B298 /* Willow.png in CopyFiles */,
 				718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StyleChanger.cpp; sourceTree = "<group>"; };
+		7120911821C0E8DC00F6DD80 /* StyleChanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StyleChanger.h; sourceTree = "<group>"; };
+		7120911A21C0ECE600F6DD80 /* Leaves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaves.png; sourceTree = "<group>"; };
+		7120911C21C1041E00F6DD80 /* StyleChanger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StyleChanger.png; sourceTree = "<group>"; };
 		712B642721BD95FB003A9718 /* Leaf Brawl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Leaf Brawl"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712B643221BD984B003A9718 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		712B643321BD984B003A9718 /* StandAlone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandAlone.cpp; sourceTree = "<group>"; };
@@ -163,11 +164,7 @@
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
 		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
-		718BB81F21BFAD2A0028B298 /* Chestnut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chestnut.png; sourceTree = "<group>"; };
 		718BB82021BFAD2A0028B298 /* Diskette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diskette.png; sourceTree = "<group>"; };
-		718BB82121BFAD2A0028B298 /* Hornbeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hornbeam.png; sourceTree = "<group>"; };
-		718BB82221BFAD2A0028B298 /* Maple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maple.png; sourceTree = "<group>"; };
-		718BB82321BFAD2A0028B298 /* Willow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Willow.png; sourceTree = "<group>"; };
 		718BB82521BFAD2A0028B298 /* Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tiles.png; sourceTree = "<group>"; };
 		718BB83021BFE5370028B298 /* Actionable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Actionable.cpp; sourceTree = "<group>"; };
 		718BB83121BFE5370028B298 /* Actionable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Actionable.h; sourceTree = "<group>"; };
@@ -517,12 +514,10 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				7120911C21C1041E00F6DD80 /* StyleChanger.png */,
+				7120911A21C0ECE600F6DD80 /* Leaves.png */,
 				718BB84021C063C20028B298 /* Platform.png */,
-				718BB81F21BFAD2A0028B298 /* Chestnut.png */,
 				718BB82021BFAD2A0028B298 /* Diskette.png */,
-				718BB82121BFAD2A0028B298 /* Hornbeam.png */,
-				718BB82221BFAD2A0028B298 /* Maple.png */,
-				718BB82321BFAD2A0028B298 /* Willow.png */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -551,6 +546,8 @@
 				718BB83421BFEDCA0028B298 /* PlayerIO.h */,
 				718BB83621BFF0230028B298 /* Elevator.cpp */,
 				718BB83721BFF0230028B298 /* Elevator.h */,
+				7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */,
+				7120911821C0E8DC00F6DD80 /* StyleChanger.h */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -646,6 +643,7 @@
 				712B643621BD984C003A9718 /* StandAlone.cpp in Sources */,
 				712B64A821BDAB14003A9718 /* Entity.cpp in Sources */,
 				718BB83821BFF0230028B298 /* Elevator.cpp in Sources */,
+				7120911921C0E8DC00F6DD80 /* StyleChanger.cpp in Sources */,
 				712B643521BD984C003A9718 /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

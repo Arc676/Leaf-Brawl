@@ -1,8 +1,8 @@
 //
-//  Actionable.cpp
+//  StyleChanger.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-11.
+//  Created by Alessandro Vinciguerra on 2018-12-12.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,6 +19,15 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
+#ifndef StyleChanger_h
+#define StyleChanger_h
+
 #include "Actionable.h"
 
-void Actionable::controlLoss() {}
+class StyleChanger : public Actionable {
+public:
+	StyleChanger(orxVECTOR pos);
+	virtual void action(Player *player);
+};
+
+#endif

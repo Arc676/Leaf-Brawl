@@ -24,6 +24,7 @@
 
 #include "Scene.h"
 #include "Elevator.h"
+#include "StyleChanger.h"
 
 class Town : public Scene {
 public:

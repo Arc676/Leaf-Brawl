@@ -24,9 +24,18 @@
 
 #include "orx.h"
 
+enum LeafStyle : int {
+	MAPLE,
+	HORNBEAM,
+	CHESTNUT,
+	WILLOW
+};
+
 class Entity {
 protected:
-	const int motionSpeed = 100;
+	const int motionSpeed = 200;
+
+	LeafStyle style = HORNBEAM;
 
 	int hp;
 	orxVECTOR jumpForce;
@@ -36,12 +45,18 @@ protected:
 	orxBODY* body;
 
 	Entity();
+
+	void setStyle(LeafStyle style);
 public:
 	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
 	int getHP();
 
 	orxVECTOR getPosition();
 	void setPosition(orxVECTOR newpos);
+
+	static orxSTRING styleToName(LeafStyle style);
+	LeafStyle getStyle();
+	void cycleStyle();
 
 	orxOBJECT* getEntity();
 };
