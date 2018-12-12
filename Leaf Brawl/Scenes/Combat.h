@@ -23,8 +23,10 @@
 #define Combat_h
 
 #include "Scene.h"
+#include "SceneTransition.h"
 
 class Combat : public Scene {
+	SceneTransition *toTown;
 public:
 	Combat(Player *player, orxCAMERA *camera);
 

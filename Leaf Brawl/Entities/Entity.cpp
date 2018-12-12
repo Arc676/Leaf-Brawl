@@ -34,6 +34,10 @@ orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
 	return vector;
 }
 
+void Entity::takeDamage(int dmg) {
+	hp -= dmg;
+}
+
 int Entity::getHP() {
 	return hp;
 }

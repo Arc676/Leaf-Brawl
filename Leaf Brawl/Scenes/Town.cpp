@@ -46,6 +46,7 @@ SceneType Town::update(const orxCLOCK_INFO *clockInfo, void *context) {
 	Scene::update(clockInfo, context);
 	if (toCombat->getActivation()) {
 		player->leaveActionable();
+		toCombat->reset();
 		return COMBAT;
 	}
 	return TOWN;

@@ -44,6 +44,8 @@ protected:
 	void setStyle(LeafStyle style);
 public:
 	static orxVECTOR createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z);
+
+	void takeDamage(int dmg);
 	int getHP();
 
 	orxVECTOR getPosition();

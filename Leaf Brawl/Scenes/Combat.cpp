@@ -26,11 +26,19 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 
 	spawnPoint = Entity::createVector(3950, 350, 0);
 
+	orxVECTOR townPos = Entity::createVector(5350, 175, 0);
+	toTown = new SceneTransition(townPos, TOWN);
+
 	orxObject_CreateFromConfig("Arena");
 }
 
 SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
 	Scene::update(clockInfo, context);
+	if (toTown->getActivation()) {
+		player->leaveActionable();
+		toTown->reset();
+		return TOWN;
+	}
 	return COMBAT;
 }
 

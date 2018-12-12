@@ -27,6 +27,9 @@ SceneTransition::SceneTransition(orxVECTOR pos, SceneType destSceneType) {
 		case COMBAT:
 			entity = orxObject_CreateFromConfig("Combat");
 			break;
+		case TOWN:
+			entity = orxObject_CreateFromConfig("ToTown");
+			break;
 		default:
 			return;
 	}
@@ -41,4 +44,8 @@ void SceneTransition::action(Player *player) {
 
 orxBOOL SceneTransition::getActivation() {
 	return wasActivated;
+}
+
+void SceneTransition::reset() {
+	wasActivated = orxFALSE;
 }

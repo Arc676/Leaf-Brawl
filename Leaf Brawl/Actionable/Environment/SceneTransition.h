@@ -33,6 +33,7 @@ public:
 	virtual void action(Player* player);
 
 	orxBOOL getActivation();
+	void reset();
 };
 
 #endif

@@ -13,6 +13,9 @@
 		7120912021C1323700F6DD80 /* Combat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120911E21C1323700F6DD80 /* Combat.cpp */; };
 		7120912321C140E800F6DD80 /* SceneTransition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120912121C140E800F6DD80 /* SceneTransition.cpp */; };
 		7120912621C168B400F6DD80 /* Combat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912421C1624D00F6DD80 /* Combat.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7120912A21C1A57B00F6DD80 /* Weapon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120912821C1A57B00F6DD80 /* Weapon.cpp */; };
+		7120912C21C1AA8400F6DD80 /* Tiles2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912B21C1AA7D00F6DD80 /* Tiles2.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120912F21C1BF9300F6DD80 /* ToTown.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B643521BD984C003A9718 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643221BD984B003A9718 /* Main.cpp */; };
 		712B643621BD984C003A9718 /* StandAlone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B643321BD984B003A9718 /* StandAlone.cpp */; };
 		712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649721BD988D003A9718 /* Leaf Brawl.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -53,11 +56,13 @@
 				718BB83F21C018130028B298 /* Combat.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
+				7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */,
 				7120912621C168B400F6DD80 /* Combat.png in CopyFiles */,
 				7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */,
 				7120911B21C0ECE900F6DD80 /* Leaves.png in CopyFiles */,
 				718BB84121C063C70028B298 /* Platform.png in CopyFiles */,
 				718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */,
+				7120912C21C1AA8400F6DD80 /* Tiles2.png in CopyFiles */,
 				718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +80,11 @@
 		7120912221C140E800F6DD80 /* SceneTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneTransition.h; sourceTree = "<group>"; };
 		7120912421C1624D00F6DD80 /* Combat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combat.png; sourceTree = "<group>"; };
 		7120912521C1634600F6DD80 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		7120912821C1A57B00F6DD80 /* Weapon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Weapon.cpp; sourceTree = "<group>"; };
+		7120912921C1A57B00F6DD80 /* Weapon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		7120912B21C1AA7D00F6DD80 /* Tiles2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tiles2.png; sourceTree = "<group>"; };
+		7120912D21C1B6D500F6DD80 /* Arena.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Arena.ini; sourceTree = "<group>"; };
+		7120912F21C1BF9300F6DD80 /* ToTown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToTown.png; sourceTree = "<group>"; };
 		712B642721BD95FB003A9718 /* Leaf Brawl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Leaf Brawl"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712B643221BD984B003A9718 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		712B643321BD984B003A9718 /* StandAlone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandAlone.cpp; sourceTree = "<group>"; };
@@ -202,6 +212,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7120912721C1A56100F6DD80 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				7120912821C1A57B00F6DD80 /* Weapon.cpp */,
+				7120912921C1A57B00F6DD80 /* Weapon.h */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		712B641E21BD95FB003A9718 = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +489,7 @@
 				718BB81121BFAB170028B298 /* Town.ini */,
 				718BB81221BFABE80028B298 /* Maps.ini */,
 				718BB83921BFF3CC0028B298 /* Combat.ini */,
+				7120912D21C1B6D500F6DD80 /* Arena.ini */,
 			);
 			path = bin;
 			sourceTree = SOURCE_ROOT;
@@ -525,6 +545,7 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				7120912F21C1BF9300F6DD80 /* ToTown.png */,
 				7120912421C1624D00F6DD80 /* Combat.png */,
 				7120911C21C1041E00F6DD80 /* StyleChanger.png */,
 				7120911A21C0ECE600F6DD80 /* Leaves.png */,
@@ -537,6 +558,7 @@
 		718BB82421BFAD2A0028B298 /* Tiled */ = {
 			isa = PBXGroup;
 			children = (
+				7120912B21C1AA7D00F6DD80 /* Tiles2.png */,
 				718BB82521BFAD2A0028B298 /* Tiles.png */,
 			);
 			path = Tiled;
@@ -545,6 +567,7 @@
 		718BB82D21BFE50D0028B298 /* Actionable */ = {
 			isa = PBXGroup;
 			children = (
+				7120912721C1A56100F6DD80 /* Items */,
 				718BB82F21BFE52E0028B298 /* General */,
 				718BB82E21BFE5180028B298 /* Environment */,
 			);
@@ -656,6 +679,7 @@
 				712B64AB21BDAB49003A9718 /* Player.cpp in Sources */,
 				718BB83221BFE5370028B298 /* Actionable.cpp in Sources */,
 				718BB83521BFEDCA0028B298 /* PlayerIO.cpp in Sources */,
+				7120912A21C1A57B00F6DD80 /* Weapon.cpp in Sources */,
 				7120912321C140E800F6DD80 /* SceneTransition.cpp in Sources */,
 				712B643621BD984C003A9718 /* StandAlone.cpp in Sources */,
 				712B64A821BDAB14003A9718 /* Entity.cpp in Sources */,
