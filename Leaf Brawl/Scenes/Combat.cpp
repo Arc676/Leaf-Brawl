@@ -26,7 +26,7 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 
 	spawnPoint = Entity::createVector(3950, 350, 0);
 
-	orxVECTOR townPos = Entity::createVector(5350, 175, 0);
+	orxVECTOR townPos = Entity::createVector(5375, 175, 0);
 	toTown = new SceneTransition(townPos, TOWN);
 
 	playerHPBar = orxObject_CreateFromConfig("HPBar");

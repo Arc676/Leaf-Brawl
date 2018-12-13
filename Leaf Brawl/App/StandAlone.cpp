@@ -42,6 +42,52 @@ StandAlone* StandAlone::Instance() {
 	return m_Instance;
 }
 
+//written by Wayne "Sausage" Johnson
+void StandAlone::paintTiles(const orxSTRING mapSection, const orxVECTOR startPos) {
+	int tilesWide = 40;
+	int tileSize = 50;
+	orxVECTOR position;
+	orxVector_Copy(&position, &startPos);
+
+	orxConfig_PushSection(mapSection);
+	orxU32 groupID = orxString_GetID(mapSection);
+
+	int baseMapIndex = 0;
+
+	orxU32 propertyCount = orxConfig_GetKeyCount();
+
+	for (orxS32 propertyIndex = 1; propertyIndex < propertyCount + 1; propertyIndex++) {
+		orxCHAR property[30]; //good maximum length
+		orxString_Print(property, "MapPart%d", propertyIndex);
+
+		orxU32 listCount = orxConfig_GetListCount(property);
+
+		for (int listIndex = 0; listIndex < listCount; listIndex++) {
+			const orxSTRING tile = orxConfig_GetListString(property, listIndex);
+			if (orxString_Compare(tile, "NONE") == 0) {
+				baseMapIndex++;
+				continue;
+			}
+
+			position.fX = startPos.fX + (baseMapIndex % tilesWide) * tileSize;
+			position.fY = startPos.fY + (baseMapIndex / tilesWide) * tileSize;
+			position.fZ = orxFLOAT_0;
+
+			orxCHAR formattedTileObject[30]; //good maximum length
+			orxString_Print(formattedTileObject, "%sObject", tile);
+
+			orxOBJECT *obj = orxObject_CreateFromConfig(formattedTileObject);
+
+			if (obj != orxNULL) {
+				orxObject_SetPosition(obj, &position);
+				orxObject_SetGroupID(obj, groupID);
+			}
+			baseMapIndex++;
+		}
+	}
+	orxConfig_PopSection();
+}
+
 StandAlone::StandAlone() {}
 
 orxSTATUS orxFASTCALL StandAlone::Init() {
@@ -59,7 +105,10 @@ orxSTATUS orxFASTCALL StandAlone::Init() {
 	orxCAMERA *battleCam = orxViewport_GetCamera(combatViewport);
 
 	combatScene = new Combat(player, battleCam);
-	
+
+	orxVECTOR arenaPos = Entity::createVector(3500, 0, 0);
+	paintTiles("ArenaTiles", arenaPos);
+
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
 
