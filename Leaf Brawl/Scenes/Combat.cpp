@@ -29,11 +29,31 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	orxVECTOR townPos = Entity::createVector(5350, 175, 0);
 	toTown = new SceneTransition(townPos, TOWN);
 
+	playerHPBar = orxObject_CreateFromConfig("HPBar");
+	enemyHPBar = orxObject_CreateFromConfig("HPBar");
+
+	orxObject_SetParent(playerHPBar, camera);
+	orxObject_SetParent(enemyHPBar, camera);
+
+	orxVECTOR hpPos = Entity::createVector(-450, 250, 0);
+	orxObject_SetPosition(playerHPBar, &hpPos);
+	hpPos.fX = 200;
+	orxObject_SetPosition(enemyHPBar, &hpPos);
+
 	orxObject_CreateFromConfig("Arena");
 }
 
 SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
 	Scene::update(clockInfo, context);
+
+	orxVECTOR scale = Entity::createVector(player->getHP() * 25 / 100, 1, 0);
+	orxObject_SetScale(playerHPBar, &scale);
+
+	scale.fX = enemy->getHP() * 25 / 100;
+	orxObject_SetScale(enemyHPBar, &scale);
+	orxVECTOR pos = Entity::createVector(450 - scale.fX * 10, 250, 0);
+	orxObject_SetPosition(enemyHPBar, &pos);
+
 	if (toTown->getActivation()) {
 		player->leaveActionable();
 		toTown->reset();
@@ -44,4 +64,8 @@ SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
 
 orxSTATUS Combat::EventHandler(const orxEVENT *currentEvent) {
 	return Scene::EventHandler(currentEvent);
+}
+
+void Combat::loadEnemy(Enemy *enemy) {
+	this->enemy = enemy;
 }

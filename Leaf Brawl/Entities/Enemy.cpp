@@ -1,8 +1,8 @@
 //
-//  Combat.h
+//  Enemy.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-13.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,27 +19,4 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Combat_h
-#define Combat_h
-
-#include "Scene.h"
-#include "SceneTransition.h"
 #include "Enemy.h"
-
-class Combat : public Scene {
-	SceneTransition *toTown;
-
-	Enemy *enemy;
-
-	orxOBJECT *playerHPBar;
-	orxOBJECT *enemyHPBar;
-public:
-	Combat(Player *player, orxCAMERA *camera);
-
-	void loadEnemy(Enemy *enemy);
-
-	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context);
-	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent);
-};
-
-#endif
