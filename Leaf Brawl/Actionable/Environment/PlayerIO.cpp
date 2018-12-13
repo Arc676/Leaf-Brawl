@@ -1,8 +1,8 @@
 //
-//  Player.h
+//  PlayerIO.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-11.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,31 +19,20 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Player_h
-#define Player_h
+#include "PlayerIO.h"
+#include "Player.h"
 
-#include "Entity.h"
-#include "Actionable.h"
+PlayerIO::PlayerIO(orxVECTOR pos) {
+	entity = orxObject_CreateFromConfig("Save");
+	orxObject_SetUserData(entity, this);
+	orxObject_SetPosition(entity, &pos);
+	orxVector_Copy(&(this->pos), &pos);
+}
 
-class Player : public Entity {
-	InputState inputState;
-
-	Actionable* currentActionable = nullptr;
-
-	InputState computeState(bool left, bool right);
-	
-	static orxBOOL sectionFilter(const orxSTRING, const orxSTRING, const orxSTRING, orxBOOL);
-public:
-	Player();
-
-	orxSTATUS read();
-	orxSTATUS write();
-
-	void update(bool left, bool right, float dt);
-	InputState getInputState();
-
-	void approachActionable(Actionable* act);
-	void leaveActionable();
-};
-
-#endif
+void PlayerIO::action(Player *player) {
+	if (player->write() == orxSTATUS_SUCCESS) {
+		// save success
+	} else {
+		// save failed
+	}
+}

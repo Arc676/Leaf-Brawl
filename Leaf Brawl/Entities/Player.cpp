@@ -91,3 +91,25 @@ void Player::approachActionable(Actionable *act) {
 void Player::leaveActionable() {
 	currentActionable = nullptr;
 }
+
+orxSTATUS Player::read() {
+	if (!orxConfig_HasSection("PlayerData")) {
+		orxConfig_Load(orxFile_GetApplicationSaveDirectory("LeafBrawl/SaveData"));
+	}
+	if (orxConfig_HasSection("PlayerData") && orxConfig_PushSection("PlayerData")) {
+		orxConfig_ClearSection("PlayerData");
+	}
+	return orxSTATUS_FAILURE;
+}
+
+orxSTATUS Player::write() {
+	if (orxConfig_PushSection("PlayerData")) {
+		orxConfig_PopSection();
+		return orxConfig_Save(orxFile_GetApplicationSaveDirectory("LeafBrawl/SaveData"), orxFALSE, sectionFilter);
+	}
+	return orxSTATUS_FAILURE;
+}
+
+orxBOOL Player::sectionFilter(const orxSTRING _zSectionName, const orxSTRING _zKeyName, const orxSTRING _zFileName, orxBOOL _bUseEncryption) {
+	return orxString_Compare(_zSectionName, "PlayerData") == 0;
+}
