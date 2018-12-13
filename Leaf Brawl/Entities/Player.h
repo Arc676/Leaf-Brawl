@@ -2,7 +2,7 @@
 //  Player.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-09.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -24,13 +24,6 @@
 
 #include "Entity.h"
 #include "Actionable.h"
-
-enum InputState : int {
-	NONE  = 0b00,
-	LEFT  = 0b01,
-	RIGHT = 0b10,
-	BOTH  = 0b11
-};
 
 class Player : public Entity {
 	InputState inputState;

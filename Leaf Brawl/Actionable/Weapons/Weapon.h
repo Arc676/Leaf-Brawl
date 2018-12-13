@@ -1,5 +1,5 @@
 //
-//  Enums.h
+//  Weapon.h
 //  Leaf Brawl
 //
 //  Created by Alessandro Vinciguerra on 2018-12-12.
@@ -19,25 +19,24 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Enums_h
-#define Enums_h
+#ifndef Weapon_h
+#define Weapon_h
 
-enum SceneType {
-	TOWN, COMBAT
-};
+#include "orx.h"
 
-enum LeafStyle : int {
-	MAPLE,
-	HORNBEAM,
-	CHESTNUT,
-	WILLOW
-};
+#include "Enums.h"
 
-enum InputState : int {
-	NONE  = 0b00,
-	LEFT  = 0b01,
-	RIGHT = 0b10,
-	BOTH  = 0b11
+class Entity;
+
+class Weapon {
+protected:
+	orxOBJECT *entity;
+	int dmg;
+public:
+	void setPosition(orxVECTOR pos);
+
+	virtual void swing(InputState direction) = 0;
+	virtual void contact(Entity *entity);
 };
 
 #endif

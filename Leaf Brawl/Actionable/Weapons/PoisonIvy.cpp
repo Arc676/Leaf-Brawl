@@ -1,8 +1,8 @@
 //
-//  Enums.h
+//  PoisonIvy.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-13.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,25 +19,12 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Enums_h
-#define Enums_h
+#include "PoisonIvy.h"
 
-enum SceneType {
-	TOWN, COMBAT
-};
+PoisonIvy::PoisonIvy() : Weapon() {
+	entity = orxObject_CreateFromConfig("PoisonIvy");
+	orxObject_SetUserData(entity, this);
+	dmg = 10;
+}
 
-enum LeafStyle : int {
-	MAPLE,
-	HORNBEAM,
-	CHESTNUT,
-	WILLOW
-};
-
-enum InputState : int {
-	NONE  = 0b00,
-	LEFT  = 0b01,
-	RIGHT = 0b10,
-	BOTH  = 0b11
-};
-
-#endif
+void PoisonIvy::swing(InputState direction) {}

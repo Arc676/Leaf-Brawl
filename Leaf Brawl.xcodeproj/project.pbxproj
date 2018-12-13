@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710DAB9621C28E79000F18CE /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710DAB9421C28E79000F18CE /* Enemy.cpp */; };
+		710DAB9921C2FA00000F18CE /* PoisonIvy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710DAB9721C2FA00000F18CE /* PoisonIvy.cpp */; };
+		710DAB9D21C2FE3C000F18CE /* HP.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DAB9C21C2FE35000F18CE /* HP.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		710DAB9E21C2FE3C000F18CE /* PoisonIvy.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DAB9B21C2FE34000F18CE /* PoisonIvy.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		710DAB9F21C2FE4E000F18CE /* Weapons.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DAB9A21C2FC1E000F18CE /* Weapons.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7120911921C0E8DC00F6DD80 /* StyleChanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */; };
 		7120911B21C0ECE900F6DD80 /* Leaves.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120911A21C0ECE600F6DD80 /* Leaves.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7120911C21C1041E00F6DD80 /* StyleChanger.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -28,7 +33,6 @@
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
-		718BB83521BFEDCA0028B298 /* PlayerIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83321BFEDCA0028B298 /* PlayerIO.cpp */; };
 		718BB83821BFF0230028B298 /* Elevator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83621BFF0230028B298 /* Elevator.cpp */; };
 		718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649B21BD988D003A9718 /* liborxd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83C21C017F50028B298 /* liborxd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649B21BD988D003A9718 /* liborxd.dylib */; };
@@ -54,8 +58,11 @@
 				718BB83D21C018130028B298 /* Town.ini in CopyFiles */,
 				718BB83E21C018130028B298 /* Maps.ini in CopyFiles */,
 				718BB83F21C018130028B298 /* Combat.ini in CopyFiles */,
+				710DAB9F21C2FE4E000F18CE /* Weapons.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
+				710DAB9D21C2FE3C000F18CE /* HP.png in CopyFiles */,
+				710DAB9E21C2FE3C000F18CE /* PoisonIvy.png in CopyFiles */,
 				7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */,
 				7120912621C168B400F6DD80 /* Combat.png in CopyFiles */,
 				7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */,
@@ -70,6 +77,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		710DAB9421C28E79000F18CE /* Enemy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		710DAB9521C28E79000F18CE /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		710DAB9721C2FA00000F18CE /* PoisonIvy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PoisonIvy.cpp; sourceTree = "<group>"; };
+		710DAB9821C2FA00000F18CE /* PoisonIvy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoisonIvy.h; sourceTree = "<group>"; };
+		710DAB9A21C2FC1E000F18CE /* Weapons.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Weapons.ini; sourceTree = "<group>"; };
+		710DAB9B21C2FE34000F18CE /* PoisonIvy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PoisonIvy.png; sourceTree = "<group>"; };
+		710DAB9C21C2FE35000F18CE /* HP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HP.png; sourceTree = "<group>"; };
 		7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StyleChanger.cpp; sourceTree = "<group>"; };
 		7120911821C0E8DC00F6DD80 /* StyleChanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StyleChanger.h; sourceTree = "<group>"; };
 		7120911A21C0ECE600F6DD80 /* Leaves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaves.png; sourceTree = "<group>"; };
@@ -83,7 +97,6 @@
 		7120912821C1A57B00F6DD80 /* Weapon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Weapon.cpp; sourceTree = "<group>"; };
 		7120912921C1A57B00F6DD80 /* Weapon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
 		7120912B21C1AA7D00F6DD80 /* Tiles2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tiles2.png; sourceTree = "<group>"; };
-		7120912D21C1B6D500F6DD80 /* Arena.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Arena.ini; sourceTree = "<group>"; };
 		7120912F21C1BF9300F6DD80 /* ToTown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToTown.png; sourceTree = "<group>"; };
 		712B642721BD95FB003A9718 /* Leaf Brawl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Leaf Brawl"; sourceTree = BUILT_PRODUCTS_DIR; };
 		712B643221BD984B003A9718 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
@@ -212,13 +225,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7120912721C1A56100F6DD80 /* Items */ = {
+		7120912721C1A56100F6DD80 /* Weapons */ = {
 			isa = PBXGroup;
 			children = (
 				7120912821C1A57B00F6DD80 /* Weapon.cpp */,
 				7120912921C1A57B00F6DD80 /* Weapon.h */,
+				710DAB9721C2FA00000F18CE /* PoisonIvy.cpp */,
+				710DAB9821C2FA00000F18CE /* PoisonIvy.h */,
 			);
-			path = Items;
+			path = Weapons;
 			sourceTree = "<group>";
 		};
 		712B641E21BD95FB003A9718 = {
@@ -489,7 +504,7 @@
 				718BB81121BFAB170028B298 /* Town.ini */,
 				718BB81221BFABE80028B298 /* Maps.ini */,
 				718BB83921BFF3CC0028B298 /* Combat.ini */,
-				7120912D21C1B6D500F6DD80 /* Arena.ini */,
+				710DAB9A21C2FC1E000F18CE /* Weapons.ini */,
 			);
 			path = bin;
 			sourceTree = SOURCE_ROOT;
@@ -520,6 +535,8 @@
 				712B64A721BDAB14003A9718 /* Entity.h */,
 				712B64A921BDAB49003A9718 /* Player.cpp */,
 				712B64AA21BDAB49003A9718 /* Player.h */,
+				710DAB9421C28E79000F18CE /* Enemy.cpp */,
+				710DAB9521C28E79000F18CE /* Enemy.h */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -545,6 +562,8 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				710DAB9C21C2FE35000F18CE /* HP.png */,
+				710DAB9B21C2FE34000F18CE /* PoisonIvy.png */,
 				7120912F21C1BF9300F6DD80 /* ToTown.png */,
 				7120912421C1624D00F6DD80 /* Combat.png */,
 				7120911C21C1041E00F6DD80 /* StyleChanger.png */,
@@ -567,7 +586,7 @@
 		718BB82D21BFE50D0028B298 /* Actionable */ = {
 			isa = PBXGroup;
 			children = (
-				7120912721C1A56100F6DD80 /* Items */,
+				7120912721C1A56100F6DD80 /* Weapons */,
 				718BB82F21BFE52E0028B298 /* General */,
 				718BB82E21BFE5180028B298 /* Environment */,
 			);
@@ -675,10 +694,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				718BB84821C069A50028B298 /* Town.cpp in Sources */,
+				710DAB9921C2FA00000F18CE /* PoisonIvy.cpp in Sources */,
 				718BB84521C0699E0028B298 /* Scene.cpp in Sources */,
+				710DAB9621C28E79000F18CE /* Enemy.cpp in Sources */,
 				712B64AB21BDAB49003A9718 /* Player.cpp in Sources */,
 				718BB83221BFE5370028B298 /* Actionable.cpp in Sources */,
-				718BB83521BFEDCA0028B298 /* PlayerIO.cpp in Sources */,
 				7120912A21C1A57B00F6DD80 /* Weapon.cpp in Sources */,
 				7120912321C140E800F6DD80 /* SceneTransition.cpp in Sources */,
 				712B643621BD984C003A9718 /* StandAlone.cpp in Sources */,

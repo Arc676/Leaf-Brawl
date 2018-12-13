@@ -2,7 +2,7 @@
 //  Player.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-09.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -43,8 +43,10 @@ void Player::update(bool left, bool right, float dt) {
 		case BOTH:
 			switch (inputState) {
 				case LEFT:
-					break;
 				case RIGHT:
+					if (weapon) {
+						weapon->swing(inputState);
+					}
 					break;
 				case NONE:
 					if (currentActionable) {
@@ -61,6 +63,9 @@ void Player::update(bool left, bool right, float dt) {
 			break;
 	}
 	orxObject_SetPosition(entity, &pos);
+	if (weapon) {
+		weapon->setPosition(pos);
+	}
 	inputState = newInput;
 }
 

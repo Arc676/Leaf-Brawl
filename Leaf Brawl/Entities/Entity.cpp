@@ -2,7 +2,7 @@
 //  Entity.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2017-12-09.
+//  Created by Alessandro Vinciguerra on 2018-12-09.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -53,6 +53,10 @@ void Entity::setPosition(orxVECTOR newpos) {
 
 orxOBJECT* Entity::getEntity() {
 	return entity;
+}
+
+void Entity::wieldWeapon(Weapon *weapon) {
+	this->weapon = weapon;
 }
 
 LeafStyle Entity::getStyle() {
