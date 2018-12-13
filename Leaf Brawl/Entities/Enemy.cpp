@@ -20,3 +20,20 @@
 //See README and LICENSE for more details
 
 #include "Enemy.h"
+
+Enemy::Enemy(LeafStyle style) : Entity() {
+	entity = orxObject_CreateFromConfig("Enemy");
+	setStyle(style);
+}
+
+void Enemy::update(Player *player, float dt) {
+	orxObject_GetPosition(entity, &pos);
+	orxVECTOR ppos = player->getPosition();
+	float dx = ppos.fX - pos.fX;
+	if (dx > 50) {
+		pos.fX += motionSpeed * dt;
+	} else if (dx < -50) {
+		pos.fX -= motionSpeed * dt;
+	}
+	orxObject_SetPosition(entity, &pos);
+}

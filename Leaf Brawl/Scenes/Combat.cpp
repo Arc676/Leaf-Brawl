@@ -35,7 +35,7 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	orxObject_SetParent(playerHPBar, camera);
 	orxObject_SetParent(enemyHPBar, camera);
 
-	orxVECTOR hpPos = Entity::createVector(-450, 250, 0);
+	orxVECTOR hpPos = Entity::createVector(-450, -250, 0);
 	orxObject_SetPosition(playerHPBar, &hpPos);
 	hpPos.fX = 200;
 	orxObject_SetPosition(enemyHPBar, &hpPos);
@@ -45,13 +45,14 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 
 SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
 	Scene::update(clockInfo, context);
+	enemy->update(player, clockInfo->fDT);
 
 	orxVECTOR scale = Entity::createVector(player->getHP() * 25 / 100, 1, 0);
 	orxObject_SetScale(playerHPBar, &scale);
 
 	scale.fX = enemy->getHP() * 25 / 100;
 	orxObject_SetScale(enemyHPBar, &scale);
-	orxVECTOR pos = Entity::createVector(450 - scale.fX * 10, 250, 0);
+	orxVECTOR pos = Entity::createVector(450 - scale.fX * 10, -250, 0);
 	orxObject_SetPosition(enemyHPBar, &pos);
 
 	if (toTown->getActivation()) {

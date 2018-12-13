@@ -27,7 +27,8 @@
 
 class Enemy : public Entity {
 public:
-	void update(Player *player);
+	Enemy(LeafStyle style);
+	void update(Player *player, float dt);
 };
 
 #endif

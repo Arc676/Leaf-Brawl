@@ -27,7 +27,6 @@
 		712B64A821BDAB14003A9718 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A621BDAB14003A9718 /* Entity.cpp */; };
 		712B64AB21BDAB49003A9718 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B64A921BDAB49003A9718 /* Player.cpp */; };
 		712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B021BDB66F003A9718 /* Player.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B121BDB710003A9718 /* Entity.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B221BDB72C003A9718 /* Actionable.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -52,7 +51,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				712B64A421BD990B003A9718 /* Leaf Brawl.ini in CopyFiles */,
-				712B64B321BDB9EB003A9718 /* Player.ini in CopyFiles */,
 				712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */,
 				712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */,
 				718BB83D21C018130028B298 /* Town.ini in CopyFiles */,
@@ -191,7 +189,6 @@
 		712B64AA21BDAB49003A9718 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		712B64AE21BDB1DD003A9718 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712B64AF21BDB1DD003A9718 /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
-		712B64B021BDB66F003A9718 /* Player.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Player.ini; sourceTree = "<group>"; };
 		712B64B121BDB710003A9718 /* Entity.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entity.ini; sourceTree = "<group>"; };
 		712B64B221BDB72C003A9718 /* Actionable.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Actionable.ini; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
@@ -498,7 +495,6 @@
 			isa = PBXGroup;
 			children = (
 				712B649721BD988D003A9718 /* Leaf Brawl.ini */,
-				712B64B021BDB66F003A9718 /* Player.ini */,
 				712B64B121BDB710003A9718 /* Entity.ini */,
 				712B64B221BDB72C003A9718 /* Actionable.ini */,
 				718BB81121BFAB170028B298 /* Town.ini */,
