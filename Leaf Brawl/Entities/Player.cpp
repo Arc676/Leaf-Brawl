@@ -97,6 +97,12 @@ orxSTATUS Player::read() {
 		orxConfig_Load(orxFile_GetApplicationSaveDirectory("LeafBrawl/SaveData"));
 	}
 	if (orxConfig_HasSection("PlayerData") && orxConfig_PushSection("PlayerData")) {
+		hp = orxConfig_GetU32("HP");
+		str = orxConfig_GetU32("Str");
+		def = orxConfig_GetU32("Def");
+		gold = orxConfig_GetU32("Gold");
+		style = (LeafStyle)orxConfig_GetU32("Style");
+
 		orxConfig_ClearSection("PlayerData");
 	}
 	return orxSTATUS_FAILURE;
@@ -104,6 +110,12 @@ orxSTATUS Player::read() {
 
 orxSTATUS Player::write() {
 	if (orxConfig_PushSection("PlayerData")) {
+		orxConfig_SetU32("HP", hp);
+		orxConfig_SetU32("Str", str);
+		orxConfig_SetU32("Def", def);
+		orxConfig_SetU32("Gold", gold);
+		orxConfig_SetU32("Style", style);
+
 		orxConfig_PopSection();
 		return orxConfig_Save(orxFile_GetApplicationSaveDirectory("LeafBrawl/SaveData"), orxFALSE, sectionFilter);
 	}

@@ -31,8 +31,8 @@ PlayerIO::PlayerIO(orxVECTOR pos) {
 
 void PlayerIO::action(Player *player) {
 	if (player->write() == orxSTATUS_SUCCESS) {
-		// save success
+		orxObject_AddSound(entity, "SuccessSound");
 	} else {
-		// save failed
+		orxObject_AddSound(entity, "ErrorSound");
 	}
 }

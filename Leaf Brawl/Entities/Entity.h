@@ -38,6 +38,10 @@ protected:
 
 	Weapon *weapon = nullptr;
 
+	int gold;
+	int str;
+	int def;
+
 	orxVECTOR pos;
 	orxOBJECT* entity;
 	orxBODY* body;

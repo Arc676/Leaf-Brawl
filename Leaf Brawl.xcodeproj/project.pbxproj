@@ -82,6 +82,10 @@
 		710DAB9A21C2FC1E000F18CE /* Weapons.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Weapons.ini; sourceTree = "<group>"; };
 		710DAB9B21C2FE34000F18CE /* PoisonIvy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PoisonIvy.png; sourceTree = "<group>"; };
 		710DAB9C21C2FE35000F18CE /* HP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HP.png; sourceTree = "<group>"; };
+		710DABA921C3B2A2000F18CE /* Sounds.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sounds.ini; sourceTree = "<group>"; };
+		710DABAB21C3B2AD000F18CE /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
+		710DABAD21C3B2B0000F18CE /* error.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.ogg; sourceTree = "<group>"; };
+		710DABAE21C3B2B0000F18CE /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StyleChanger.cpp; sourceTree = "<group>"; };
 		7120911821C0E8DC00F6DD80 /* StyleChanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StyleChanger.h; sourceTree = "<group>"; };
 		7120911A21C0ECE600F6DD80 /* Leaves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaves.png; sourceTree = "<group>"; };
@@ -222,6 +226,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710DABAC21C3B2B0000F18CE /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				710DABAD21C3B2B0000F18CE /* error.ogg */,
+				710DABAE21C3B2B0000F18CE /* success.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		7120912721C1A56100F6DD80 /* Weapons */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +507,7 @@
 		712B649621BD988D003A9718 /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				710DABA921C3B2A2000F18CE /* Sounds.ini */,
 				712B649721BD988D003A9718 /* Leaf Brawl.ini */,
 				712B64B121BDB710003A9718 /* Entity.ini */,
 				712B64B221BDB72C003A9718 /* Actionable.ini */,
@@ -549,6 +563,7 @@
 		718BB81D21BFAD2A0028B298 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				710DABAC21C3B2B0000F18CE /* Sound */,
 				718BB81E21BFAD2A0028B298 /* Sprites */,
 				718BB82421BFAD2A0028B298 /* Tiled */,
 			);
@@ -558,6 +573,7 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				710DABAB21C3B2AD000F18CE /* coin.png */,
 				710DAB9C21C2FE35000F18CE /* HP.png */,
 				710DAB9B21C2FE34000F18CE /* PoisonIvy.png */,
 				7120912F21C1BF9300F6DD80 /* ToTown.png */,
