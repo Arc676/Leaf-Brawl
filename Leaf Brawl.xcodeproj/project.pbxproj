@@ -30,6 +30,9 @@
 		712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B421BDB9EB003A9718 /* Entity.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B121BDB710003A9718 /* Entity.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		712B64B521BDB9EB003A9718 /* Actionable.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B64B221BDB72C003A9718 /* Actionable.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771EB421C44CBA00C9FF59 /* Sounds.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DABA921C3B2A2000F18CE /* Sounds.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771EB521C44D6100C9FF59 /* error.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DABAD21C3B2B0000F18CE /* error.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771EB821C44EEE00C9FF59 /* success.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EB721C44EE100C9FF59 /* success.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
@@ -58,6 +61,7 @@
 				718BB83E21C018130028B298 /* Maps.ini in CopyFiles */,
 				718BB83F21C018130028B298 /* Combat.ini in CopyFiles */,
 				710DAB9F21C2FE4E000F18CE /* Weapons.ini in CopyFiles */,
+				71771EB421C44CBA00C9FF59 /* Sounds.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				718BB83A21C017F10028B298 /* liborxd.dylib in CopyFiles */,
 				710DAB9D21C2FE3C000F18CE /* HP.png in CopyFiles */,
@@ -70,6 +74,8 @@
 				718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */,
 				7120912C21C1AA8400F6DD80 /* Tiles2.png in CopyFiles */,
 				718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */,
+				71771EB521C44D6100C9FF59 /* error.ogg in CopyFiles */,
+				71771EB821C44EEE00C9FF59 /* success.ogg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +92,6 @@
 		710DABA921C3B2A2000F18CE /* Sounds.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sounds.ini; sourceTree = "<group>"; };
 		710DABAB21C3B2AD000F18CE /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		710DABAD21C3B2B0000F18CE /* error.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.ogg; sourceTree = "<group>"; };
-		710DABAE21C3B2B0000F18CE /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		7120911721C0E8DC00F6DD80 /* StyleChanger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StyleChanger.cpp; sourceTree = "<group>"; };
 		7120911821C0E8DC00F6DD80 /* StyleChanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StyleChanger.h; sourceTree = "<group>"; };
 		7120911A21C0ECE600F6DD80 /* Leaves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaves.png; sourceTree = "<group>"; };
@@ -196,6 +201,7 @@
 		712B64AF21BDB1DD003A9718 /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
 		712B64B121BDB710003A9718 /* Entity.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entity.ini; sourceTree = "<group>"; };
 		712B64B221BDB72C003A9718 /* Actionable.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Actionable.ini; sourceTree = "<group>"; };
+		71771EB721C44EE100C9FF59 /* success.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.ogg; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
 		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
@@ -230,8 +236,8 @@
 		710DABAC21C3B2B0000F18CE /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				71771EB721C44EE100C9FF59 /* success.ogg */,
 				710DABAD21C3B2B0000F18CE /* error.ogg */,
-				710DABAE21C3B2B0000F18CE /* success.wav */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
