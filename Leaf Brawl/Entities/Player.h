@@ -27,6 +27,8 @@
 
 class Player : public Entity {
 	InputState inputState;
+	
+	int gold = 0;
 
 	Actionable* currentActionable = nullptr;
 

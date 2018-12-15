@@ -29,6 +29,8 @@ class Enemy : public Entity {
 public:
 	Enemy(LeafStyle style);
 	void update(Player *player, float dt);
+
+	static Enemy* createRandomEnemy(Entity *opponent);
 };
 
 #endif

@@ -42,6 +42,14 @@ int Entity::getHP() {
 	return hp;
 }
 
+int Entity::getStr() {
+	return str;
+}
+
+int Entity::getDef() {
+	return def;
+}
+
 orxVECTOR Entity::getPosition() {
 	return pos;
 }

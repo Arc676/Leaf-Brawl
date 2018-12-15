@@ -42,3 +42,14 @@ void Enemy::update(Player *player, float dt) {
 	}
 	orxObject_SetPosition(entity, &pos);
 }
+
+Enemy* Enemy::createRandomEnemy(Entity *opponent) {
+	Enemy *e = new Enemy((LeafStyle)orxMath_GetRandomS32(MAPLE, WILLOW));
+	e->str += orxMath_GetRandomS32(-5, 5);
+	e->def += orxMath_GetRandomS32(-5, 5);
+	if (opponent) {
+		e->str += opponent->getStr();
+		e->def += opponent->getDef();
+	}
+	return e;
+}

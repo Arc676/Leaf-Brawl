@@ -34,7 +34,10 @@
 class Town : public Scene {
 	SceneTransition *toCombat;
 
-	Enemy *enemy1, *enemy2, *enemy3, *playerOpp;
+	Enemy *playerOpp;
+	Enemy *enemyA1, *enemyA2;
+	Enemy *enemyB1, *enemyB2;
+	Enemy *enemyC1, *enemyC2;
 public:
 	Town(Player *player, orxCAMERA *camera);
 

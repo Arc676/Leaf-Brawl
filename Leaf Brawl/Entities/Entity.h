@@ -38,7 +38,6 @@ protected:
 
 	Weapon *weapon = nullptr;
 
-	int gold = 0;
 	int str = 10;
 	int def = 10;
 
@@ -54,6 +53,9 @@ public:
 
 	void takeDamage(int dmg);
 	int getHP();
+
+	int getStr();
+	int getDef();
 
 	void wieldWeapon(Weapon *weapon);
 
