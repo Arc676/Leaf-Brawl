@@ -35,7 +35,7 @@ protected:
 public:
 	void setPosition(orxVECTOR pos);
 
-	virtual void swing(InputState direction) = 0;
+	virtual void swing(InputState direction);
 	virtual void contact(Entity *entity);
 };
 

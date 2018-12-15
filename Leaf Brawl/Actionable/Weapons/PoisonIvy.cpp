@@ -26,5 +26,3 @@ PoisonIvy::PoisonIvy() : Weapon() {
 	orxObject_SetUserData(entity, this);
 	dmg = 10;
 }
-
-void PoisonIvy::swing(InputState direction) {}

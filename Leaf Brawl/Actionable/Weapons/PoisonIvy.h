@@ -27,8 +27,6 @@
 class PoisonIvy : public Weapon {
 public:
 	PoisonIvy();
-	
-	virtual void swing(InputState direction);
 };
 
 #endif

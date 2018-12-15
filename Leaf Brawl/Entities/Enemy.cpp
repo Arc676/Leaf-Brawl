@@ -30,10 +30,14 @@ void Enemy::update(Player *player, float dt) {
 	orxObject_GetPosition(entity, &pos);
 	orxVECTOR ppos = player->getPosition();
 	float dx = ppos.fX - pos.fX;
+	InputState dir = dx > 0 ? RIGHT : LEFT;
 	if (dx > 50) {
 		pos.fX += motionSpeed * dt;
 	} else if (dx < -50) {
 		pos.fX -= motionSpeed * dt;
+	}
+	if (orxMath_Abs(dx) < 10) {
+		weapon->swing(dir);
 	}
 	orxObject_SetPosition(entity, &pos);
 }
