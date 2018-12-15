@@ -43,8 +43,7 @@ StandAlone* StandAlone::Instance() {
 }
 
 //written by Wayne "Sausage" Johnson
-void StandAlone::paintTiles(const orxSTRING mapSection, const orxVECTOR startPos) {
-	int tilesWide = 40;
+void StandAlone::paintTiles(const orxSTRING mapSection, const orxVECTOR startPos, int tilesWide) {
 	int tileSize = 50;
 	orxVECTOR position;
 	orxVector_Copy(&position, &startPos);
@@ -106,8 +105,10 @@ orxSTATUS orxFASTCALL StandAlone::Init() {
 
 	combatScene = new Combat(player, battleCam);
 
+	paintTiles("TownTiles", orxVECTOR_0, 50);
+
 	orxVECTOR arenaPos = Entity::createVector(3500, 0, 0);
-	paintTiles("ArenaTiles", arenaPos);
+	paintTiles("ArenaTiles", arenaPos, 40);
 
 	orxCLOCK* upClock = orxClock_FindFirst(-1.0f, orxCLOCK_TYPE_CORE);
 	orxClock_Register(upClock, Update, orxNULL, orxMODULE_ID_MAIN, orxCLOCK_PRIORITY_NORMAL);
