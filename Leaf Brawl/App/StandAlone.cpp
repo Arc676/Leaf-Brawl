@@ -91,6 +91,7 @@ StandAlone::StandAlone() {}
 
 orxSTATUS orxFASTCALL StandAlone::Init() {
 	player = new Player();
+	player->read();
 
 	townViewport = orxViewport_CreateFromConfig("MainViewport");
 	orxCAMERA *townCam = orxViewport_GetCamera(townViewport);

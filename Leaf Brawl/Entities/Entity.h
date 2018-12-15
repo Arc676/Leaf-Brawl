@@ -54,6 +54,9 @@ public:
 	void takeDamage(int dmg);
 	int getHP();
 
+	void die();
+	void despawn();
+
 	int getStr();
 	int getDef();
 

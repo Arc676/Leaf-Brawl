@@ -26,6 +26,14 @@ Entity::Entity() {
 	jumpForce = createVector(0, -250, 0);
 }
 
+void Entity::die() {
+	setStyle(DEAD);
+}
+
+void Entity::despawn() {
+	orxObject_SetLifeTime(entity, 0);
+}
+
 orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
 	orxVECTOR vector;
 	vector.fX = x;
@@ -36,6 +44,9 @@ orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
 
 void Entity::takeDamage(int dmg) {
 	hp -= dmg;
+	if (hp <= 0) {
+		die();
+	}
 }
 
 int Entity::getHP() {
@@ -92,6 +103,6 @@ orxSTRING Entity::styleToName(LeafStyle style) {
 		case WILLOW:
 			return (orxSTRING)"Willow";
 		default:
-			return (orxSTRING)"";
+			return (orxSTRING)"Dead";
 	}
 }

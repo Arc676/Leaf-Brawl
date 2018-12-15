@@ -102,8 +102,10 @@ orxSTATUS Player::read() {
 		def = orxConfig_GetU32("Def");
 		gold = orxConfig_GetU32("Gold");
 		style = (LeafStyle)orxConfig_GetU32("Style");
+		setStyle(style);
 
 		orxConfig_ClearSection("PlayerData");
+		return orxSTATUS_SUCCESS;
 	}
 	return orxSTATUS_FAILURE;
 }

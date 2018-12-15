@@ -30,7 +30,8 @@ enum LeafStyle : int {
 	MAPLE,
 	HORNBEAM,
 	CHESTNUT,
-	WILLOW
+	WILLOW,
+	DEAD
 };
 
 enum InputState : int {
