@@ -22,6 +22,8 @@
 #ifndef Town_h
 #define Town_h
 
+#include <vector>
+
 #include "Scene.h"
 
 #include "Enemy.h"
@@ -34,10 +36,8 @@
 class Town : public Scene {
 	SceneTransition *toCombat;
 
-	Enemy *playerOpp;
-	Enemy *enemyA1, *enemyA2;
-	Enemy *enemyB1, *enemyB2;
-	Enemy *enemyC1, *enemyC2;
+	Enemy *playerOpp = nullptr;
+	std::vector<Enemy*> stakeFighers;
 public:
 	Town(Player *player, orxCAMERA *camera);
 

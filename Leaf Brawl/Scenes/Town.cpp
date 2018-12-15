@@ -39,6 +39,8 @@ Town::Town(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	orxVECTOR combatPos = Entity::createVector(725, 375, 0);
 	toCombat = new SceneTransition(combatPos, COMBAT);
 
+	stakeFighers = std::vector<Enemy*>(6);
+
 	orxObject_CreateFromConfig("Town");
 }
 
@@ -58,9 +60,17 @@ orxSTATUS Town::EventHandler(const orxEVENT *currentEvent) {
 
 void Town::activate() {
 	if (playerOpp) {
-		//
+		playerOpp->despawn();
+		delete playerOpp;
+		for (int i = 0; i < 6; i++) {
+			delete stakeFighers.at(i);
+		}
+		stakeFighers.clear();
 	}
-	playerOpp = Enemy::createRandomEnemy(player);
+	playerOpp = Enemy::createRandomEnemy(player, false);
+	for (int i = 0; i < 6; i++) {
+		stakeFighers.at(i) = Enemy::createRandomEnemy(orxNULL, true);
+	}
 	Scene::activate();
 }
 

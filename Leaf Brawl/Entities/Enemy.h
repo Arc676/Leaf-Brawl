@@ -27,10 +27,11 @@
 
 class Enemy : public Entity {
 public:
+	Enemy();
 	Enemy(LeafStyle style);
 	void update(Player *player, float dt);
 
-	static Enemy* createRandomEnemy(Entity *opponent);
+	static Enemy* createRandomEnemy(Entity *opponent, bool isVirtual);
 };
 
 #endif
