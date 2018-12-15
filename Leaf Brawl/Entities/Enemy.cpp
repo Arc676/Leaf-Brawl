@@ -23,6 +23,7 @@
 
 Enemy::Enemy(LeafStyle style) : Entity() {
 	entity = orxObject_CreateFromConfig("Enemy");
+	orxObject_SetUserData(entity, this);
 	setStyle(style);
 }
 

@@ -33,6 +33,8 @@
 		71771EB421C44CBA00C9FF59 /* Sounds.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DABA921C3B2A2000F18CE /* Sounds.ini */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EB521C44D6100C9FF59 /* error.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DABAD21C3B2B0000F18CE /* error.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EB821C44EEE00C9FF59 /* success.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EB721C44EE100C9FF59 /* success.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771EBB21C515F100C9FF59 /* LeafSword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771EB921C515F100C9FF59 /* LeafSword.cpp */; };
+		71771EBF21C5860400C9FF59 /* liborx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
@@ -199,6 +201,8 @@
 		712B64B121BDB710003A9718 /* Entity.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entity.ini; sourceTree = "<group>"; };
 		712B64B221BDB72C003A9718 /* Actionable.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Actionable.ini; sourceTree = "<group>"; };
 		71771EB721C44EE100C9FF59 /* success.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.ogg; sourceTree = "<group>"; };
+		71771EB921C515F100C9FF59 /* LeafSword.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LeafSword.cpp; sourceTree = "<group>"; };
+		71771EBA21C515F100C9FF59 /* LeafSword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeafSword.h; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
 		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
@@ -223,7 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71771EBC21C56AA000C9FF59 /* liborx.dylib in Frameworks */,
+				71771EBF21C5860400C9FF59 /* liborx.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +250,8 @@
 				7120912921C1A57B00F6DD80 /* Weapon.h */,
 				710DAB9721C2FA00000F18CE /* PoisonIvy.cpp */,
 				710DAB9821C2FA00000F18CE /* PoisonIvy.h */,
+				71771EB921C515F100C9FF59 /* LeafSword.cpp */,
+				71771EBA21C515F100C9FF59 /* LeafSword.h */,
 			);
 			path = Weapons;
 			sourceTree = "<group>";
@@ -714,6 +720,7 @@
 				710DABAF21C3B9C2000F18CE /* Weapon.cpp in Sources */,
 				710DAB9921C2FA00000F18CE /* PoisonIvy.cpp in Sources */,
 				718BB84521C0699E0028B298 /* Scene.cpp in Sources */,
+				71771EBB21C515F100C9FF59 /* LeafSword.cpp in Sources */,
 				710DAB9621C28E79000F18CE /* Enemy.cpp in Sources */,
 				712B64AB21BDAB49003A9718 /* Player.cpp in Sources */,
 				718BB83221BFE5370028B298 /* Actionable.cpp in Sources */,

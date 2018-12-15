@@ -55,3 +55,15 @@ SceneType Town::update(const orxCLOCK_INFO *clockInfo, void *context) {
 orxSTATUS Town::EventHandler(const orxEVENT *currentEvent) {
 	return Scene::EventHandler(currentEvent);
 }
+
+void Town::activate() {
+	if (playerOpp) {
+		//
+	}
+	playerOpp = Enemy::createRandomEnemy(player);
+	Scene::activate();
+}
+
+Enemy* Town::getOpponent() {
+	return playerOpp;
+}

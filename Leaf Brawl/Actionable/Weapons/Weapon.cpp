@@ -22,6 +22,11 @@
 #include "Weapon.h"
 #include "Entity.h"
 
+Weapon::Weapon(orxSTRING name) {
+	entity = orxObject_CreateFromConfig(name);
+	orxObject_SetUserData(entity, this);
+}
+
 void Weapon::contact(Entity *entity) {
 	int dealt = dmg;
 	if (orxMath_GetRandomS32(0, 99) < 50) {

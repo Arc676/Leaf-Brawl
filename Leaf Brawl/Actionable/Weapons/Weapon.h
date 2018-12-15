@@ -32,6 +32,8 @@ class Weapon {
 protected:
 	orxOBJECT *entity;
 	int dmg;
+
+	Weapon(orxSTRING name);
 public:
 	void setPosition(orxVECTOR pos);
 

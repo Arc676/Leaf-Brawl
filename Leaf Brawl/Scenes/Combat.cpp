@@ -69,4 +69,6 @@ orxSTATUS Combat::EventHandler(const orxEVENT *currentEvent) {
 
 void Combat::loadEnemy(Enemy *enemy) {
 	this->enemy = enemy;
+	orxVECTOR spawn = Entity::createVector(5000, 350, 0);
+	enemy->setPosition(spawn);
 }

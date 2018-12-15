@@ -21,8 +21,6 @@
 
 #include "PoisonIvy.h"
 
-PoisonIvy::PoisonIvy() : Weapon() {
-	entity = orxObject_CreateFromConfig("PoisonIvy");
-	orxObject_SetUserData(entity, this);
+PoisonIvy::PoisonIvy() : Weapon((orxSTRING)"PoisonIvy") {
 	dmg = 10;
 }

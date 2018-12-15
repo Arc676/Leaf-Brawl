@@ -23,6 +23,9 @@
 #define Town_h
 
 #include "Scene.h"
+
+#include "Enemy.h"
+
 #include "Elevator.h"
 #include "StyleChanger.h"
 #include "PlayerIO.h"
@@ -30,11 +33,17 @@
 
 class Town : public Scene {
 	SceneTransition *toCombat;
+
+	Enemy *enemy1, *enemy2, *enemy3, *playerOpp;
 public:
 	Town(Player *player, orxCAMERA *camera);
 
 	virtual SceneType update(const orxCLOCK_INFO* clockInfo, void* context);
 	virtual orxSTATUS EventHandler(const orxEVENT* currentEvent);
+
+	virtual void activate();
+
+	Enemy* getOpponent();
 };
 
 #endif

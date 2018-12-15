@@ -96,6 +96,7 @@ orxSTATUS orxFASTCALL StandAlone::Init() {
 	orxCAMERA *townCam = orxViewport_GetCamera(townViewport);
 
 	townScene = new Town(player, townCam);
+	townScene->activate();
 	currentScene = townScene;
 	currentViewport = townViewport;
 
@@ -136,6 +137,7 @@ void orxFASTCALL StandAlone::Update(const orxCLOCK_INFO* clockInfo, void* contex
 				currentScene = townScene;
 				break;
 			case COMBAT:
+				combatScene->loadEnemy(townScene->getOpponent());
 				currentViewport = combatViewport;
 				currentScene = combatScene;
 				break;
