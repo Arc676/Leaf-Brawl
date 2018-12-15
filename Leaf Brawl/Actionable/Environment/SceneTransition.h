@@ -27,10 +27,15 @@
 
 class SceneTransition : public Actionable {
 	orxBOOL wasActivated = orxFALSE;
+	orxBOOL isLocked = orxFALSE;
 	SceneType destScene;
 public:
 	SceneTransition(orxVECTOR pos, SceneType destSceneType);
 	virtual void action(Player* player);
+	virtual void controlLoss();
+
+	void lock();
+	void unlock();
 
 	orxBOOL getActivation();
 	void reset();

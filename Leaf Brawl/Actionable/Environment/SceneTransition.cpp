@@ -39,11 +39,26 @@ SceneTransition::SceneTransition(orxVECTOR pos, SceneType destSceneType) {
 }
 
 void SceneTransition::action(Player *player) {
+	if (isLocked) {
+		return;
+	}
 	wasActivated = orxTRUE;
 }
 
 orxBOOL SceneTransition::getActivation() {
 	return wasActivated;
+}
+
+void SceneTransition::lock() {
+	isLocked = orxTRUE;
+}
+
+void SceneTransition::unlock() {
+	isLocked = orxFALSE;
+}
+
+void SceneTransition::controlLoss() {
+	reset();
 }
 
 void SceneTransition::reset() {

@@ -28,6 +28,7 @@ Combat::Combat(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 
 	orxVECTOR townPos = Entity::createVector(5375, 175, 0);
 	toTown = new SceneTransition(townPos, TOWN);
+	toTown->lock();
 
 	playerHPBar = orxObject_CreateFromConfig("HPBar");
 	enemyHPBar = orxObject_CreateFromConfig("HPBar");
@@ -50,10 +51,14 @@ SceneType Combat::update(const orxCLOCK_INFO *clockInfo, void *context) {
 	orxVECTOR scale = Entity::createVector(player->getHP() * 25 / 100, 1, 0);
 	orxObject_SetScale(playerHPBar, &scale);
 
-	scale.fX = enemy->getHP() * 25 / 100;
+	scale.fX = orxMAX(enemy->getHP() * 25 / 100, 0);
 	orxObject_SetScale(enemyHPBar, &scale);
 	orxVECTOR pos = Entity::createVector(450 - scale.fX * 10, -250, 0);
 	orxObject_SetPosition(enemyHPBar, &pos);
+
+	if (enemy->getHP() <= 0) {
+		toTown->unlock();
+	}
 
 	if (toTown->getActivation()) {
 		player->leaveActionable();
