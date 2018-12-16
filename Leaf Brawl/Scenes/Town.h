@@ -32,6 +32,7 @@
 #include "StyleChanger.h"
 #include "PlayerIO.h"
 #include "SceneTransition.h"
+#include "WeaponSwitcher.h"
 
 class Town : public Scene {
 	SceneTransition *toCombat;

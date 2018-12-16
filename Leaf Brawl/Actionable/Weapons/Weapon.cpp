@@ -48,7 +48,7 @@ void Weapon::swing(InputState direction) {}
 
 void Weapon::setPosition(orxVECTOR pos) {
 	pos.fZ = -0.01;
-	orxObject_SetPosition(entity, &pos);
+//	orxObject_SetPosition(entity, &pos);
 }
 
 void Weapon::setDirection(InputState direction) {
@@ -61,4 +61,8 @@ void Weapon::setWielder(Entity *entity) {
 
 void Weapon::setEnabled(orxBOOL enabled) {
 	orxObject_Enable(entity, enabled);
+}
+
+void Weapon::despawn() {
+	orxObject_SetLifeTime(entity, 0);
 }

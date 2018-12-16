@@ -34,12 +34,15 @@
 		71771EB521C44D6100C9FF59 /* error.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710DABAD21C3B2B0000F18CE /* error.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EB821C44EEE00C9FF59 /* success.ogg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EB721C44EE100C9FF59 /* success.ogg */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EBB21C515F100C9FF59 /* LeafSword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771EB921C515F100C9FF59 /* LeafSword.cpp */; };
-		71771EBF21C5860400C9FF59 /* liborx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649921BD988D003A9718 /* liborx.dylib */; };
 		71771EC221C664CC00C9FF59 /* Peat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771EC021C664CC00C9FF59 /* Peat.cpp */; };
 		71771EC521C66B7F00C9FF59 /* Spore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771EC321C66B7F00C9FF59 /* Spore.cpp */; };
 		71771EC821C6701400C9FF59 /* Peat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EC621C6700D00C9FF59 /* Peat.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EC921C6701400C9FF59 /* Spores.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EC721C6700D00C9FF59 /* Spores.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771ECB21C68AA900C9FF59 /* LeafBlade.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771ECA21C68A9F00C9FF59 /* LeafBlade.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771ECD21C6903D00C9FF59 /* WeaponSwitcher.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771ECC21C6902F00C9FF59 /* WeaponSwitcher.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771ED021C6904C00C9FF59 /* WeaponSwitcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771ECE21C6904C00C9FF59 /* WeaponSwitcher.cpp */; };
+		71771ED421C6A79F00C9FF59 /* liborxd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 712B649B21BD988D003A9718 /* liborxd.dylib */; };
+		71771ED521C6A7A400C9FF59 /* liborxd.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 712B649B21BD988D003A9718 /* liborxd.dylib */; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
@@ -68,11 +71,13 @@
 				710DAB9F21C2FE4E000F18CE /* Weapons.ini in CopyFiles */,
 				71771EB421C44CBA00C9FF59 /* Sounds.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
+				71771ED521C6A7A400C9FF59 /* liborxd.dylib in CopyFiles */,
 				710DAB9D21C2FE3C000F18CE /* HP.png in CopyFiles */,
 				71771ECB21C68AA900C9FF59 /* LeafBlade.png in CopyFiles */,
 				71771EC821C6701400C9FF59 /* Peat.png in CopyFiles */,
 				71771EC921C6701400C9FF59 /* Spores.png in CopyFiles */,
 				710DAB9E21C2FE3C000F18CE /* PoisonIvy.png in CopyFiles */,
+				71771ECD21C6903D00C9FF59 /* WeaponSwitcher.png in CopyFiles */,
 				7120913021C1BF9C00F6DD80 /* ToTown.png in CopyFiles */,
 				7120912621C168B400F6DD80 /* Combat.png in CopyFiles */,
 				7120911D21C1042400F6DD80 /* StyleChanger.png in CopyFiles */,
@@ -218,6 +223,9 @@
 		71771EC621C6700D00C9FF59 /* Peat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peat.png; sourceTree = "<group>"; };
 		71771EC721C6700D00C9FF59 /* Spores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spores.png; sourceTree = "<group>"; };
 		71771ECA21C68A9F00C9FF59 /* LeafBlade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeafBlade.png; sourceTree = "<group>"; };
+		71771ECC21C6902F00C9FF59 /* WeaponSwitcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeaponSwitcher.png; sourceTree = "<group>"; };
+		71771ECE21C6904C00C9FF59 /* WeaponSwitcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WeaponSwitcher.cpp; sourceTree = "<group>"; };
+		71771ECF21C6904C00C9FF59 /* WeaponSwitcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeaponSwitcher.h; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
 		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
@@ -242,7 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71771EBF21C5860400C9FF59 /* liborx.dylib in Frameworks */,
+				71771ED421C6A79F00C9FF59 /* liborxd.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +610,7 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				71771ECC21C6902F00C9FF59 /* WeaponSwitcher.png */,
 				71771ECA21C68A9F00C9FF59 /* LeafBlade.png */,
 				71771EC621C6700D00C9FF59 /* Peat.png */,
 				71771EC721C6700D00C9FF59 /* Spores.png */,
@@ -648,6 +657,8 @@
 				7120911821C0E8DC00F6DD80 /* StyleChanger.h */,
 				7120912121C140E800F6DD80 /* SceneTransition.cpp */,
 				7120912221C140E800F6DD80 /* SceneTransition.h */,
+				71771ECE21C6904C00C9FF59 /* WeaponSwitcher.cpp */,
+				71771ECF21C6904C00C9FF59 /* WeaponSwitcher.h */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -741,6 +752,7 @@
 				710DABB021C3B9C9000F18CE /* PlayerIO.cpp in Sources */,
 				710DABAF21C3B9C2000F18CE /* Weapon.cpp in Sources */,
 				710DAB9921C2FA00000F18CE /* PoisonIvy.cpp in Sources */,
+				71771ED021C6904C00C9FF59 /* WeaponSwitcher.cpp in Sources */,
 				718BB84521C0699E0028B298 /* Scene.cpp in Sources */,
 				71771EBB21C515F100C9FF59 /* LeafSword.cpp in Sources */,
 				710DAB9621C28E79000F18CE /* Enemy.cpp in Sources */,

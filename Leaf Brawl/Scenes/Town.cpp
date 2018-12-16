@@ -36,6 +36,9 @@ Town::Town(Player *player, orxCAMERA *camera) : Scene(player, camera) {
 	orxVECTOR savePos = Entity::createVector(75, 675, 0);
 	new PlayerIO(savePos);
 
+	orxVECTOR weaponSwitchPos = Entity::createVector(1525, 675, 0);
+	new WeaponSwitcher(weaponSwitchPos);
+
 	orxVECTOR combatPos = Entity::createVector(725, 375, 0);
 	toCombat = new SceneTransition(combatPos, COMBAT);
 
@@ -68,6 +71,7 @@ void Town::activate() {
 		stakeFighers.clear();
 	}
 	playerOpp = Enemy::createRandomEnemy(player, false);
+	playerOpp->setEnabled(orxFALSE);
 	for (int i = 0; i < 6; i++) {
 		stakeFighers.push_back(Enemy::createRandomEnemy(orxNULL, true));
 	}

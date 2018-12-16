@@ -27,6 +27,13 @@ Enemy::Enemy(LeafStyle style) : Entity((orxSTRING)"Enemy") {
 	setStyle(style);
 }
 
+void Enemy::setEnabled(orxBOOL enabled) {
+	orxObject_Enable(entity, enabled);
+	if (weapon) {
+		weapon->setEnabled(enabled);
+	}
+}
+
 void Enemy::update(Player *player, float dt) {
 	if (hp <= 0) {
 		return;
@@ -34,13 +41,13 @@ void Enemy::update(Player *player, float dt) {
 	orxObject_GetPosition(entity, &pos);
 	orxVECTOR ppos = player->getPosition();
 	float dx = ppos.fX - pos.fX;
-	if (dx > 50) {
+	if (dx > 100) {
 		pos.fX += motionSpeed * dt;
-	} else if (dx < -50) {
+	} else if (dx < -100) {
 		pos.fX -= motionSpeed * dt;
 	}
 	InputState attackDir = dx > 0 ? RIGHT : LEFT;
-	if (orxMath_Abs(dx) < 10) {
+	if (orxMath_Abs(dx) < 60) {
 		weapon->swing(attackDir);
 	}
 	orxObject_SetPosition(entity, &pos);
@@ -52,6 +59,7 @@ Enemy* Enemy::createRandomEnemy(Entity *opponent, bool isVirtual) {
 	Enemy *e = isVirtual ? new Enemy() : new Enemy((LeafStyle)orxMath_GetRandomS32(MAPLE, WILLOW));
 	e->str += orxMath_GetRandomS32(-5, 5);
 	e->def += orxMath_GetRandomS32(-5, 5);
+	e->wieldWeapon(new LeafSword());
 	if (opponent) {
 		e->str += opponent->getStr();
 		e->def += opponent->getDef();

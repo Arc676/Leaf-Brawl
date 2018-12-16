@@ -20,9 +20,11 @@
 //See README and LICENSE for more details
 
 #include "Player.h"
+#include "Peat.h"
 
 Player::Player() : Entity((orxSTRING)"Player") {
 	orxInput_Load(orxSTRING_EMPTY);
+//	weapon = new Peat();
 }
 
 void Player::update(bool left, bool right, float dt) {

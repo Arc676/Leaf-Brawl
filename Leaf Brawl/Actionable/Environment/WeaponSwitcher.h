@@ -1,8 +1,8 @@
 //
-//  Weapon.h
+//  WeaponSwitcher.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-16.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,37 +19,24 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Weapon_h
-#define Weapon_h
+#ifndef WeaponSwitcher_h
+#define WeaponSwitcher_h
 
-#include "orx.h"
+#include "Actionable.h"
+#include "PoisonIvy.h"
+#include "LeafSword.h"
+#include "Peat.h"
 
-#include "Enums.h"
+class WeaponSwitcher : public Actionable {
+	PoisonIvy *poisonIvy;
+	LeafSword *leafSword;
+	Peat *peat;
 
-class Entity;
-
-class Weapon {
-protected:
-	orxOBJECT *entity = nullptr;
-	int dmg;
-
-	Entity *wielder = nullptr;
-	InputState direction;
-
-	Weapon(orxSTRING name);
+	int equipped;
 public:
-	void setPosition(orxVECTOR pos);
-	virtual void setDirection(InputState direction);
-	void setWielder(Entity *entity);
+	WeaponSwitcher(orxVECTOR pos);
 
-	void setEnabled(orxBOOL enabled);
-	void despawn();
-
-	virtual int getDmg();
-
-	virtual void swing(InputState direction);
-	virtual void contact(Entity *entity);
-	virtual void leaveContact();
+	virtual void action(Player *player);
 };
 
 #endif

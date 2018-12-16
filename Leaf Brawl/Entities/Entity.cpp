@@ -41,6 +41,10 @@ void Entity::die() {
 
 void Entity::despawn() {
 	orxObject_SetLifeTime(entity, 0);
+	if (weapon) {
+		weapon->despawn();
+		delete weapon;
+	}
 }
 
 orxVECTOR Entity::createVector(orxFLOAT x, orxFLOAT y, orxFLOAT z) {
@@ -84,6 +88,9 @@ orxOBJECT* Entity::getEntity() {
 }
 
 void Entity::wieldWeapon(Weapon *weapon) {
+	if (this->weapon) {
+		this->weapon->setWielder(nullptr);
+	}
 	this->weapon = weapon;
 	weapon->setWielder(this);
 }

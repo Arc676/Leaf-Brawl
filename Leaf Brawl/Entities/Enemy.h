@@ -24,12 +24,15 @@
 
 #include "Entity.h"
 #include "Player.h"
+#include "LeafSword.h"
 
 class Enemy : public Entity {
 public:
 	Enemy();
 	Enemy(LeafStyle style);
 	void update(Player *player, float dt);
+
+	void setEnabled(orxBOOL enabled);
 
 	static Enemy* createRandomEnemy(Entity *opponent, bool isVirtual);
 };
