@@ -26,6 +26,14 @@ Peat::Peat() : Weapon((orxSTRING)"Peat") {
 }
 
 void Peat::setDirection(InputState direction) {
+	for (int i = 0; i < spores.size();) {
+		if (spores[i]->didImpact()) {
+			delete spores[i];
+			spores.erase(spores.begin() + i);
+		} else {
+			i++;
+		}
+	}
 	orxObject_SetFlip(entity, direction == LEFT, orxFALSE);
 	Weapon::setDirection(direction);
 }
@@ -33,5 +41,9 @@ void Peat::setDirection(InputState direction) {
 void Peat::contact(Entity *entity) {}
 
 void Peat::swing(InputState direction) {
-	//
+	orxVECTOR pos;
+	orxObject_GetPosition(entity, &pos);
+	int xForce = direction == LEFT ? -50 : 50;
+	pos.fX += xForce;
+	spores.push_back(new Spore(dmg, pos, xForce * 4));
 }

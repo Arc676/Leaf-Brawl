@@ -22,11 +22,16 @@
 #ifndef Spore_h
 #define Spore_h
 
-#include "Peat.h"
+#include "Weapon.h"
 
 class Spore : public Weapon {
+	orxBOOL impacted = false;
 public:
-	Spore(int dmg);
+	Spore(int dmg, orxVECTOR pos, int xForce);
+
+	orxBOOL didImpact();
+
+	virtual void contact(Entity *entity);
 };
 
 #endif

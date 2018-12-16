@@ -22,9 +22,13 @@
 #ifndef Peat_h
 #define Peat_h
 
+#include <vector>
+
 #include "Weapon.h"
+#include "Spore.h"
 
 class Peat : public Weapon {
+	std::vector<Spore*> spores;
 public:
 	Peat();
 

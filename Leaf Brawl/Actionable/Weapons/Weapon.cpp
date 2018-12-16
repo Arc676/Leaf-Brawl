@@ -28,6 +28,9 @@ Weapon::Weapon(orxSTRING name) {
 }
 
 void Weapon::contact(Entity *entity) {
+	if (!entity) {
+		return;
+	}
 	int dealt = dmg;
 	if (orxMath_GetRandomS32(0, 99) < 50) {
 		dealt *= 2;

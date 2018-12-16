@@ -69,7 +69,7 @@ void Town::activate() {
 	}
 	playerOpp = Enemy::createRandomEnemy(player, false);
 	for (int i = 0; i < 6; i++) {
-		stakeFighers.at(i) = Enemy::createRandomEnemy(orxNULL, true);
+		stakeFighers.push_back(Enemy::createRandomEnemy(orxNULL, true));
 	}
 	Scene::activate();
 }

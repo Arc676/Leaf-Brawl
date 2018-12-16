@@ -20,7 +20,22 @@
 //See README and LICENSE for more details
 
 #include "Spore.h"
+#include "Entity.h"
 
-Spore::Spore(int dmg) : Weapon((orxSTRING)"Spore") {
+Spore::Spore(int dmg, orxVECTOR pos, int xForce) : Weapon((orxSTRING)"Spore") {
 	this->dmg = dmg;
+	orxObject_SetPosition(entity, &pos);
+	orxBODY *body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
+	orxVECTOR firepower = Entity::createVector(xForce, 0, 0);
+	orxBody_ApplyForce(body, &firepower, orxNULL);
+}
+
+orxBOOL Spore::didImpact() {
+	return impacted;
+}
+
+void Spore::contact(Entity *entity) {
+	Weapon::contact(entity);
+	impacted = orxTRUE;
+	orxObject_SetLifeTime(this->entity, 0);
 }

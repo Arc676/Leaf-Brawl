@@ -73,9 +73,7 @@ orxSTATUS Scene::EventHandler(const orxEVENT *currentEvent) {
 							if (isWeapon) {
 								Weapon *weapon = (Weapon*)orxObject_GetUserData(objs[i]);
 								Entity *hit = (Entity*)orxObject_GetUserData(objs[1 - i]);
-								if (hit) {
-									weapon->contact(hit);
-								}
+								weapon->contact(hit);
 							}
 						}
 					}
