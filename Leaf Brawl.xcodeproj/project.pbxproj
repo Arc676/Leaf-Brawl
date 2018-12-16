@@ -39,6 +39,7 @@
 		71771EC521C66B7F00C9FF59 /* Spore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71771EC321C66B7F00C9FF59 /* Spore.cpp */; };
 		71771EC821C6701400C9FF59 /* Peat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EC621C6700D00C9FF59 /* Peat.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		71771EC921C6701400C9FF59 /* Spores.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771EC721C6700D00C9FF59 /* Spores.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		71771ECB21C68AA900C9FF59 /* LeafBlade.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71771ECA21C68A9F00C9FF59 /* LeafBlade.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82821BFAD350028B298 /* Diskette.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82021BFAD2A0028B298 /* Diskette.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB82C21BFAD3E0028B298 /* Tiles.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 718BB82521BFAD2A0028B298 /* Tiles.png */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		718BB83221BFE5370028B298 /* Actionable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718BB83021BFE5370028B298 /* Actionable.cpp */; };
@@ -68,6 +69,7 @@
 				71771EB421C44CBA00C9FF59 /* Sounds.ini in CopyFiles */,
 				712B64AC21BDB129003A9718 /* liborx.dylib in CopyFiles */,
 				710DAB9D21C2FE3C000F18CE /* HP.png in CopyFiles */,
+				71771ECB21C68AA900C9FF59 /* LeafBlade.png in CopyFiles */,
 				71771EC821C6701400C9FF59 /* Peat.png in CopyFiles */,
 				71771EC921C6701400C9FF59 /* Spores.png in CopyFiles */,
 				710DAB9E21C2FE3C000F18CE /* PoisonIvy.png in CopyFiles */,
@@ -215,6 +217,7 @@
 		71771EC421C66B7F00C9FF59 /* Spore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spore.h; sourceTree = "<group>"; };
 		71771EC621C6700D00C9FF59 /* Peat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peat.png; sourceTree = "<group>"; };
 		71771EC721C6700D00C9FF59 /* Spores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spores.png; sourceTree = "<group>"; };
+		71771ECA21C68A9F00C9FF59 /* LeafBlade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeafBlade.png; sourceTree = "<group>"; };
 		718BB81021BFA7950028B298 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		718BB81121BFAB170028B298 /* Town.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Town.ini; sourceTree = "<group>"; };
 		718BB81221BFABE80028B298 /* Maps.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maps.ini; sourceTree = "<group>"; };
@@ -599,6 +602,7 @@
 		718BB81E21BFAD2A0028B298 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				71771ECA21C68A9F00C9FF59 /* LeafBlade.png */,
 				71771EC621C6700D00C9FF59 /* Peat.png */,
 				71771EC721C6700D00C9FF59 /* Spores.png */,
 				710DABAB21C3B2AD000F18CE /* coin.png */,

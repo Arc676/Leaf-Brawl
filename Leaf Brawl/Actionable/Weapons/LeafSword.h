@@ -1,8 +1,8 @@
 //
-//  Weapon.h
+//  LeafSword.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-15.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,30 +19,20 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#ifndef Weapon_h
-#define Weapon_h
+#ifndef LeafSword_h
+#define LeafSword_h
 
-#include "orx.h"
+#include "Weapon.h"
 
-#include "Enums.h"
-
-class Entity;
-
-class Weapon {
-protected:
-	orxOBJECT *entity;
-	int dmg;
-
-	Entity *wielder;
-	InputState direction;
-
-	Weapon(orxSTRING name);
+class LeafSword : public Weapon {
+	orxBOOL isSwinging;
+	Entity *inContact;
 public:
-	void setPosition(orxVECTOR pos);
-	virtual void setDirection(InputState direction);
-	void setWielder(Entity *entity);
+	LeafSword();
 
-	void setEnabled(orxBOOL enabled);
+	static orxSTATUS AnimListener(const orxEVENT *currentEvent);
+
+	virtual void setDirection(InputState direction);
 
 	virtual int getDmg();
 

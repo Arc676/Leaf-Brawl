@@ -28,7 +28,7 @@ Weapon::Weapon(orxSTRING name) {
 }
 
 void Weapon::contact(Entity *entity) {
-	if (!entity) {
+	if (!entity || entity == wielder) {
 		return;
 	}
 	int dealt = dmg;
@@ -37,6 +37,8 @@ void Weapon::contact(Entity *entity) {
 	}
 	entity->takeDamage(dealt);
 }
+
+void Weapon::leaveContact() {}
 
 int Weapon::getDmg() {
 	return dmg;

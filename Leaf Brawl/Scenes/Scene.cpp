@@ -66,14 +66,18 @@ orxSTATUS Scene::EventHandler(const orxEVENT *currentEvent) {
 									act->controlLoss();
 								}
 							}
-						} else if (currentEvent->eID == orxPHYSICS_EVENT_CONTACT_ADD) {
+						} else {
 							orxConfig_PushSection(name1);
 							orxBOOL isWeapon = orxConfig_GetBool("IsWeapon");
 							orxConfig_PopSection();
 							if (isWeapon) {
 								Weapon *weapon = (Weapon*)orxObject_GetUserData(objs[i]);
-								Entity *hit = (Entity*)orxObject_GetUserData(objs[1 - i]);
-								weapon->contact(hit);
+								if (currentEvent->eID == orxPHYSICS_EVENT_CONTACT_ADD) {
+									Entity *hit = (Entity*)orxObject_GetUserData(objs[1 - i]);
+									weapon->contact(hit);
+								} else {
+									weapon->leaveContact();
+								}
 							}
 						}
 					}
