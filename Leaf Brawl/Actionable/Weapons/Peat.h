@@ -1,8 +1,8 @@
 //
-//  Weapon.cpp
+//  Peat.h
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-16.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,37 +19,19 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
+#ifndef Peat_h
+#define Peat_h
+
 #include "Weapon.h"
-#include "Entity.h"
 
-Weapon::Weapon(orxSTRING name) {
-	entity = orxObject_CreateFromConfig(name);
-	orxObject_SetUserData(entity, this);
-}
+class Peat : public Weapon {
+public:
+	Peat();
 
-void Weapon::contact(Entity *entity) {
-	int dealt = dmg;
-	if (orxMath_GetRandomS32(0, 99) < 50) {
-		dealt *= 2;
-	}
-	entity->takeDamage(dealt);
-}
+	virtual void setDirection(InputState direction);
+	
+	virtual void swing(InputState direction);
+	virtual void contact(Entity *entity);
+};
 
-int Weapon::getDmg() {
-	return dmg;
-}
-
-void Weapon::swing(InputState direction) {}
-
-void Weapon::setPosition(orxVECTOR pos) {
-	pos.fZ = -0.01;
-	orxObject_SetPosition(entity, &pos);
-}
-
-void Weapon::setDirection(InputState direction) {
-	this->direction = direction;
-}
-
-void Weapon::setWielder(Entity *entity) {
-	wielder = entity;
-}
+#endif

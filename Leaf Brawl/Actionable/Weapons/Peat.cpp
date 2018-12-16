@@ -1,8 +1,8 @@
 //
-//  Weapon.cpp
+//  Peat.cpp
 //  Leaf Brawl
 //
-//  Created by Alessandro Vinciguerra on 2018-12-12.
+//  Created by Alessandro Vinciguerra on 2018-12-16.
 //      <alesvinciguerra@gmail.com>
 //Copyright (C) 2018 Arc676/Alessandro Vinciguerra
 
@@ -19,37 +19,19 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //See README and LICENSE for more details
 
-#include "Weapon.h"
-#include "Entity.h"
+#include "Peat.h"
 
-Weapon::Weapon(orxSTRING name) {
-	entity = orxObject_CreateFromConfig(name);
-	orxObject_SetUserData(entity, this);
+Peat::Peat() : Weapon((orxSTRING)"Peat") {
+	dmg = 5;
 }
 
-void Weapon::contact(Entity *entity) {
-	int dealt = dmg;
-	if (orxMath_GetRandomS32(0, 99) < 50) {
-		dealt *= 2;
-	}
-	entity->takeDamage(dealt);
+void Peat::setDirection(InputState direction) {
+	orxObject_SetFlip(entity, direction == LEFT, orxFALSE);
+	Weapon::setDirection(direction);
 }
 
-int Weapon::getDmg() {
-	return dmg;
-}
+void Peat::contact(Entity *entity) {}
 
-void Weapon::swing(InputState direction) {}
-
-void Weapon::setPosition(orxVECTOR pos) {
-	pos.fZ = -0.01;
-	orxObject_SetPosition(entity, &pos);
-}
-
-void Weapon::setDirection(InputState direction) {
-	this->direction = direction;
-}
-
-void Weapon::setWielder(Entity *entity) {
-	wielder = entity;
+void Peat::swing(InputState direction) {
+	//
 }

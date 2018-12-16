@@ -36,9 +36,15 @@ void Player::update(bool left, bool right, float dt) {
 	switch (newInput) {
 		case LEFT:
 			pos.fX -= motionSpeed * dt;
+			if (weapon) {
+				weapon->setDirection(LEFT);
+			}
 			break;
 		case RIGHT:
 			pos.fX += motionSpeed * dt;
+			if (weapon) {
+				weapon->setDirection(RIGHT);
+			}
 			break;
 		case BOTH:
 			switch (inputState) {

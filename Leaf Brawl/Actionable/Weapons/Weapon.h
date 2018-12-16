@@ -34,10 +34,12 @@ protected:
 	int dmg;
 
 	Entity *wielder;
+	InputState direction;
 
 	Weapon(orxSTRING name);
 public:
 	void setPosition(orxVECTOR pos);
+	virtual void setDirection(InputState direction);
 	void setWielder(Entity *entity);
 
 	virtual int getDmg();
