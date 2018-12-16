@@ -46,6 +46,7 @@ protected:
 	orxBODY *body;
 
 	Entity();
+	Entity(orxSTRING configName);
 
 	void setStyle(LeafStyle style);
 public:

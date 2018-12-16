@@ -42,6 +42,8 @@ public:
 	virtual void setDirection(InputState direction);
 	void setWielder(Entity *entity);
 
+	void setEnabled(orxBOOL enabled);
+
 	virtual int getDmg();
 
 	virtual void swing(InputState direction);

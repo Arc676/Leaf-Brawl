@@ -23,9 +23,7 @@
 
 Enemy::Enemy() {}
 
-Enemy::Enemy(LeafStyle style) : Entity() {
-	entity = orxObject_CreateFromConfig("Enemy");
-	orxObject_SetUserData(entity, this);
+Enemy::Enemy(LeafStyle style) : Entity((orxSTRING)"Enemy") {
 	setStyle(style);
 }
 
@@ -41,10 +39,13 @@ void Enemy::update(Player *player, float dt) {
 	} else if (dx < -50) {
 		pos.fX -= motionSpeed * dt;
 	}
+	InputState attackDir = dx > 0 ? RIGHT : LEFT;
 	if (orxMath_Abs(dx) < 10) {
-		weapon->swing(dx > 0 ? RIGHT : LEFT);
+		weapon->swing(attackDir);
 	}
 	orxObject_SetPosition(entity, &pos);
+	weapon->setPosition(pos);
+	weapon->setDirection(attackDir);
 }
 
 Enemy* Enemy::createRandomEnemy(Entity *opponent, bool isVirtual) {

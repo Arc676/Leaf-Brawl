@@ -21,13 +21,8 @@
 
 #include "Player.h"
 
-Player::Player() : Entity() {
+Player::Player() : Entity((orxSTRING)"Player") {
 	orxInput_Load(orxSTRING_EMPTY);
-	entity = orxObject_CreateFromConfig("Player");
-	orxObject_SetUserData(entity, this);
-	body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
-	pos = Entity::createVector(0, 10, 0);
-	orxObject_SetPosition(entity, &pos);
 }
 
 void Player::update(bool left, bool right, float dt) {

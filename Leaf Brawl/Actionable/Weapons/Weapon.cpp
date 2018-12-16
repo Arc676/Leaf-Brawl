@@ -56,3 +56,7 @@ void Weapon::setDirection(InputState direction) {
 void Weapon::setWielder(Entity *entity) {
 	wielder = entity;
 }
+
+void Weapon::setEnabled(orxBOOL enabled) {
+	orxObject_Enable(entity, enabled);
+}

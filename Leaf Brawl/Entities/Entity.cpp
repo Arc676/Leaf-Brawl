@@ -26,8 +26,17 @@ Entity::Entity() {
 	jumpForce = createVector(0, -250, 0);
 }
 
+Entity::Entity(orxSTRING configName) : Entity() {
+	entity = orxObject_CreateFromConfig(configName);
+	orxObject_SetUserData(entity, this);
+	body = (orxBODY*)_orxObject_GetStructure(entity, orxSTRUCTURE_ID_BODY);
+}
+
 void Entity::die() {
 	setStyle(DEAD);
+	if (weapon) {
+		weapon->setEnabled(orxFALSE);
+	}
 }
 
 void Entity::despawn() {
