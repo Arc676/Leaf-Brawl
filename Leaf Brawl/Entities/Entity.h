@@ -42,8 +42,8 @@ protected:
 	int def = 10;
 
 	orxVECTOR pos;
-	orxOBJECT* entity;
-	orxBODY* body;
+	orxOBJECT *entity;
+	orxBODY *body;
 
 	Entity();
 

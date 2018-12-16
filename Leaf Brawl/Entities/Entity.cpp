@@ -76,6 +76,7 @@ orxOBJECT* Entity::getEntity() {
 
 void Entity::wieldWeapon(Weapon *weapon) {
 	this->weapon = weapon;
+	weapon->setWielder(this);
 }
 
 LeafStyle Entity::getStyle() {

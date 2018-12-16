@@ -22,5 +22,5 @@
 #include "PoisonIvy.h"
 
 PoisonIvy::PoisonIvy() : Weapon((orxSTRING)"PoisonIvy") {
-	dmg = 10;
+	dmg = 30;
 }

@@ -35,9 +35,17 @@ void Weapon::contact(Entity *entity) {
 	entity->takeDamage(dealt);
 }
 
+int Weapon::getDmg() {
+	return dmg;
+}
+
 void Weapon::swing(InputState direction) {}
 
 void Weapon::setPosition(orxVECTOR pos) {
 	pos.fZ = -0.01;
 	orxObject_SetPosition(entity, &pos);
+}
+
+void Weapon::setWielder(Entity *entity) {
+	wielder = entity;
 }

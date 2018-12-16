@@ -33,9 +33,14 @@ protected:
 	orxOBJECT *entity;
 	int dmg;
 
+	Entity *wielder;
+
 	Weapon(orxSTRING name);
 public:
 	void setPosition(orxVECTOR pos);
+	void setWielder(Entity *entity);
+
+	virtual int getDmg();
 
 	virtual void swing(InputState direction);
 	virtual void contact(Entity *entity);
